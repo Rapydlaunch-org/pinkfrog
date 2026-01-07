@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+/* 🎬 Pink Frog Motion Pictures - Cinematic Design System */
+
+:root {
+  /* Brand Colors - Pink Frog */
+  --frog-green: #2CCC4C;
+  --frog-pink: #FF69B4;
+  --background: #fdfdfd;
+  --foreground: #1a1a1a;
+
+  --emerald-vibrant: #2CCC4C;
+  --emerald-dark: #1a9e38;
+}
+
+@theme inline {
+  --color-frog-green: #2CCC4C;
+  --color-frog-pink: #FF69B4;
+  --color-background: #ffffff;
+}
+
+/* Smooth Scrolling & Snap */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--background);
+  background-image: url('/bg-texture.png');
+  background-repeat: repeat;
+  background-size: auto;
+  color: var(--foreground);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Slackey", cursive;
+}
+
+/* ========================================
+   MINIMALIST TYPOGRAPHY
+   ======================================== */
+
+.font-space {
+  font-family: "Slackey", cursive;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.font-fredoka {
+  font-family: "Fredoka", sans-serif;
+}
+
+.font-slackey {
+  font-family: "Slackey", sans-serif;
+}
+
+.font-chewy {
+  font-family: "Chewy", sans-serif;
+}
+
+.font-changa {
+  font-family: "Changa One", cursive;
+}
+
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--frog-pink);
+  font-family: "Slackey", cursive;
+}
+
+.text-outline-green {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--frog-green);
+  font-family: "Slackey", cursive;
+}
+
+.text-hero {
+  font-size: clamp(2rem, 6vw, 5rem);
+  line-height: 1.2;
+  font-weight: 500;
+  font-family: "Slackey", cursive;
+  letter-spacing: 0.02em;
+}
+
+/* ========================================
+   CONSOLE & TERMINAL STYLES
+   ======================================== */
+
+.console-box {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--frog-pink);
+  border-left: 4px solid var(--frog-green);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.6);
+  pointer-events: auto;
+  box-shadow: 10px 10px 0px rgba(255, 105, 180, 0.1);
+}
+
+.console-line {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.console-label {
+  color: var(--frog-green);
+  min-width: 80px;
+  font-weight: bold;
+}
+
+.scanline {
+  display: none;
+  /* Removed for cleaner look on texture */
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background: var(--frog-pink);
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ========================================
+   GRADIENT TEXT EFFECTS
+   ======================================== */
+
+.text-gradient-pink-green {
+  background: linear-gradient(135deg, var(--frog-pink) 0%, var(--frog-green) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ========================================
+   CUSTOM SCROLLBAR
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--frog-green), var(--frog-pink));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, var(--frog-pink), var(--frog-green));
+}
+
+/* ========================================
+   RESPONSIVE UTILITIES
+   ======================================== */
+
+@media (max-width: 768px) {
+  .text-hero {
+    font-size: clamp(2rem, 10vw, 5rem);
+  }
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}

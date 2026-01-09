@@ -474,21 +474,29 @@ function ImageSlider() {
                 transition: {
                     delay: 1.5
                 },
-                className: "absolute bottom-12 right-12 hidden md:flex flex-col items-center gap-4 z-20",
+                className: "absolute bottom-12 right-12 hidden md:flex flex-col items-center gap-4 z-20 cursor-pointer",
+                onClick: ()=>{
+                    const postersSection = document.getElementById('featured-posters');
+                    if (postersSection) {
+                        postersSection.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "font-mono text-[10px] text-white/60 tracking-widest uppercase rotate-90 origin-center",
                         children: "Scroll"
                     }, void 0, false, {
                         fileName: "[project]/components/ImageSlider.tsx",
-                        lineNumber: 165,
+                        lineNumber: 171,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "w-[2px] h-20 bg-gradient-to-b from-frog-green via-frog-pink to-transparent"
                     }, void 0, false, {
                         fileName: "[project]/components/ImageSlider.tsx",
-                        lineNumber: 168,
+                        lineNumber: 174,
                         columnNumber: 17
                     }, this)
                 ]
@@ -1253,6 +1261,7 @@ function AboutSection() {
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                id: "featured-posters",
                 className: "py-20 border-t border-black/5 bg-black/5 backdrop-blur-sm overflow-hidden",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "w-full",

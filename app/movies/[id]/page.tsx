@@ -23,6 +23,21 @@ export default function MovieDetailPage() {
         }
     }, [params.id, router]);
 
+    // Auto-scroll to hash target (e.g., #visuals) when page loads
+    useEffect(() => {
+        const hash = window.location.hash;
+        if (hash) {
+            // Small delay to ensure DOM is fully rendered
+            const timer = setTimeout(() => {
+                const element = document.getElementById(hash.substring(1));
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 100);
+            return () => clearTimeout(timer);
+        }
+    }, [movie]);
+
     if (!movie) return <div className="min-h-screen bg-black text-white flex items-center justify-center font-mono">LOADING_PROJECT_DATA...</div>;
 
     return (

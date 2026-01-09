@@ -78,7 +78,7 @@ export default function AboutSection() {
             </div>
 
             {/* 2. Scrollable Posters Section */}
-            <div className="py-20 border-t border-black/5 bg-black/5 backdrop-blur-sm overflow-hidden">
+            <div id="featured-posters" className="py-20 border-t border-black/5 bg-black/5 backdrop-blur-sm overflow-hidden">
                 <div className="w-full">
                     <h3 className="font-mono text-xs text-frog-green font-bold tracking-[0.3em] uppercase mb-8 ml-6 md:ml-12 max-w-[1600px] mx-auto">
                         FEATURED POSTERS

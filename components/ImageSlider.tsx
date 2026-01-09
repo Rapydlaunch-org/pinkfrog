@@ -160,7 +160,13 @@ export default function ImageSlider() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.5 }}
-                className="absolute bottom-12 right-12 hidden md:flex flex-col items-center gap-4 z-20"
+                className="absolute bottom-12 right-12 hidden md:flex flex-col items-center gap-4 z-20 cursor-pointer"
+                onClick={() => {
+                    const postersSection = document.getElementById('featured-posters');
+                    if (postersSection) {
+                        postersSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }}
             >
                 <span className="font-mono text-[10px] text-white/60 tracking-widest uppercase rotate-90 origin-center">
                     Scroll

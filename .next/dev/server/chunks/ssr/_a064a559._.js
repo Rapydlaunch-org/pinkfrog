@@ -482,191 +482,10 @@ __turbopack_context__.s([
     ()=>Console
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
 'use client';
 ;
-;
-;
 function Console() {
-    const [time, setTime] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [status, setStatus] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('SYSTEM READY');
-    const [location, setLocation] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('NORTH EAST INDIA');
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        const timer = setInterval(()=>{
-            const now = new Date();
-            setTime(now.toLocaleTimeString('en-US', {
-                hour12: false
-            }));
-        }, 1000);
-        return ()=>clearInterval(timer);
-    }, []);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full max-w-[1400px] mx-auto px-6 md:px-12 py-12 bg-transparent",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-            initial: {
-                opacity: 0,
-                y: 20
-            },
-            whileInView: {
-                opacity: 1,
-                y: 0
-            },
-            viewport: {
-                once: true
-            },
-            className: "console-box w-full md:w-[450px]",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex justify-between items-start mb-6 border-b border-frog-pink/10 pb-4",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "font-mono text-[10px] text-frog-green font-bold tracking-[0.2em] uppercase",
-                            children: "PINK FROG OS v1.0.4"
-                        }, void 0, false, {
-                            fileName: "[project]/components/Console.tsx",
-                            lineNumber: 29,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "w-2 h-2 rounded-full bg-frog-green animate-pulse"
-                        }, void 0, false, {
-                            fileName: "[project]/components/Console.tsx",
-                            lineNumber: 32,
-                            columnNumber: 21
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/components/Console.tsx",
-                    lineNumber: 28,
-                    columnNumber: 17
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "space-y-3",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "console-line",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "console-label",
-                                    children: "STATUS:"
-                                }, void 0, false, {
-                                    fileName: "[project]/components/Console.tsx",
-                                    lineNumber: 37,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "text-black font-bold",
-                                    children: status
-                                }, void 0, false, {
-                                    fileName: "[project]/components/Console.tsx",
-                                    lineNumber: 38,
-                                    columnNumber: 25
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/components/Console.tsx",
-                            lineNumber: 36,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "console-line",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "console-label",
-                                    children: "LOC:"
-                                }, void 0, false, {
-                                    fileName: "[project]/components/Console.tsx",
-                                    lineNumber: 41,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "text-black/80",
-                                    children: location
-                                }, void 0, false, {
-                                    fileName: "[project]/components/Console.tsx",
-                                    lineNumber: 42,
-                                    columnNumber: 25
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/components/Console.tsx",
-                            lineNumber: 40,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "console-line",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "console-label",
-                                    children: "TIME:"
-                                }, void 0, false, {
-                                    fileName: "[project]/components/Console.tsx",
-                                    lineNumber: 45,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "text-black/80",
-                                    children: time
-                                }, void 0, false, {
-                                    fileName: "[project]/components/Console.tsx",
-                                    lineNumber: 46,
-                                    columnNumber: 25
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/components/Console.tsx",
-                            lineNumber: 44,
-                            columnNumber: 21
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/components/Console.tsx",
-                    lineNumber: 35,
-                    columnNumber: 17
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "mt-6 pt-6 border-t border-frog-pink/10",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center gap-3",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-black/30 font-mono text-[10px] tracking-widest",
-                                children: "READY_"
-                            }, void 0, false, {
-                                fileName: "[project]/components/Console.tsx",
-                                lineNumber: 52,
-                                columnNumber: 25
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "terminal-cursor"
-                            }, void 0, false, {
-                                fileName: "[project]/components/Console.tsx",
-                                lineNumber: 53,
-                                columnNumber: 25
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/Console.tsx",
-                        lineNumber: 51,
-                        columnNumber: 21
-                    }, this)
-                }, void 0, false, {
-                    fileName: "[project]/components/Console.tsx",
-                    lineNumber: 50,
-                    columnNumber: 17
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "[project]/components/Console.tsx",
-            lineNumber: 22,
-            columnNumber: 13
-        }, this)
-    }, void 0, false, {
-        fileName: "[project]/components/Console.tsx",
-        lineNumber: 21,
-        columnNumber: 9
-    }, this);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {}, void 0, false);
 }
 }),
 "[project]/components/StorySection.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
@@ -699,16 +518,158 @@ function StorySection() {
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "relative z-10 max-w-7xl w-full text-center",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[7vw] md:text-[3.5vw] font-bold leading-[1.1] font-space tracking-tight text-black uppercase opacity-90 hover:opacity-100 transition-opacity duration-500",
-                    children: "PINK FROG FILMS IS A DYNAMIC FILM STUDIO CRAFTING DISTINCT, COLORFUL NARRATIVES THAT LEAP OFF THE SCREEN AND INTO THE CULTURAL CONVERSATION. WE STRIVE TO CAPTURE THE AUTHENTIC VOICE OF NORTHEAST INDIA, SHARING ITS UNTOLD NUANCES WITH THE WORLD."
-                }, void 0, false, {
-                    fileName: "[project]/components/StorySection.tsx",
-                    lineNumber: 19,
-                    columnNumber: 17
-                }, this)
-            }, void 0, false, {
+                className: "relative z-10 max-w-7xl w-full flex flex-col items-center gap-12",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "console-box w-full max-w-md self-start md:ml-12",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex justify-between items-center mb-4 border-b border-frog-pink/20 pb-2",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[10px] text-frog-green uppercase tracking-widest",
+                                        children: "PINK FROG OS V1.0.4"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/StorySection.tsx",
+                                        lineNumber: 22,
+                                        columnNumber: 25
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "w-2 h-2 rounded-full bg-frog-green animate-pulse"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/StorySection.tsx",
+                                        lineNumber: 23,
+                                        columnNumber: 25
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/StorySection.tsx",
+                                lineNumber: 21,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "space-y-1 font-mono text-xs",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "console-line",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "console-label",
+                                                children: "STATUS:"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/StorySection.tsx",
+                                                lineNumber: 27,
+                                                columnNumber: 29
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                children: "SYSTEM READY"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/StorySection.tsx",
+                                                lineNumber: 28,
+                                                columnNumber: 29
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/StorySection.tsx",
+                                        lineNumber: 26,
+                                        columnNumber: 25
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "console-line",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "console-label",
+                                                children: "LOC:"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/StorySection.tsx",
+                                                lineNumber: 31,
+                                                columnNumber: 29
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                children: "NORTH EAST INDIA"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/StorySection.tsx",
+                                                lineNumber: 32,
+                                                columnNumber: 29
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/StorySection.tsx",
+                                        lineNumber: 30,
+                                        columnNumber: 25
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "console-line",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "console-label",
+                                                children: "TIME:"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/StorySection.tsx",
+                                                lineNumber: 35,
+                                                columnNumber: 29
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                children: new Date().toLocaleTimeString('en-US', {
+                                                    hour12: false
+                                                })
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/StorySection.tsx",
+                                                lineNumber: 36,
+                                                columnNumber: 29
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/StorySection.tsx",
+                                        lineNumber: 34,
+                                        columnNumber: 25
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/StorySection.tsx",
+                                lineNumber: 25,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "mt-4 text-xs font-mono text-frog-green/50",
+                                children: [
+                                    "READY",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "terminal-cursor"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/StorySection.tsx",
+                                        lineNumber: 40,
+                                        columnNumber: 30
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/StorySection.tsx",
+                                lineNumber: 39,
+                                columnNumber: 21
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/StorySection.tsx",
+                        lineNumber: 20,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "text-center",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-[5vw] md:text-[2.5vw] font-bold leading-[1.1] font-space tracking-tight text-black uppercase opacity-90 hover:opacity-100 transition-opacity duration-500",
+                            children: "PINK FROG FILMS IS A DYNAMIC FILM STUDIO CRAFTING DISTINCT, COLORFUL NARRATIVES THAT LEAP OFF THE SCREEN AND INTO THE CULTURAL CONVERSATION. WE STRIVE TO CAPTURE THE AUTHENTIC VOICE OF NORTHEAST INDIA, SHARING ITS UNTOLD NUANCES WITH THE WORLD."
+                        }, void 0, false, {
+                            fileName: "[project]/components/StorySection.tsx",
+                            lineNumber: 45,
+                            columnNumber: 21
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/StorySection.tsx",
+                        lineNumber: 44,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/components/StorySection.tsx",
                 lineNumber: 18,
                 columnNumber: 13
@@ -741,10 +702,11 @@ const movies = [
         summary: "Lords of Lockdown captures the raw, unfiltered reality of humanity during one of the most challenging periods in modern history. Through intimate lens and sweeping narratives, it documents the indomitable spirit of those who stood tall when the world engagingly stood still.",
         thesis: "The documentary posits that crisis does not facilitate change; it reveals the true nature of societal bonds. By focusing on micro-narratives within the macro-event of the lockdown, the film authenticates the human experience as one of collective resilience rather than isolated suffering. It challenges the viewer to look beyond the statistics and see the faces of survival.",
         screenshots: [
-            "/locks.png",
-            "/chingum.png",
-            "/hero-bg.png",
-            "/locks.png"
+            "/projects/01.jpg",
+            "/projects/02.jpg",
+            "/projects/03.jpg",
+            "/projects/04.jpg",
+            "/projects/05.jpg"
         ]
     },
     {
@@ -759,10 +721,11 @@ const movies = [
         summary: "In the shadow-drenched alleys of a forgotten town, 'Chingum' weaves a tale of suspense and supernatural intrigue. It is a stylistic homage to classic noir, infused with the rich, eerie folklore of the region.",
         thesis: "Chingum explores the intersection of modern anxiety and ancient fear. It suggests that our past acts as a hauntology, always present, always watching. The film utilizes high-contrast visual storytelling to mirror the duality of its characters—caught between tradition and modernity, reality and nightmare.",
         screenshots: [
-            "/chingum.png",
-            "/locks.png",
-            "/hero-bg.png",
-            "/chingum.png"
+            "/projects/1.jpg",
+            "/projects/2.jpg",
+            "/projects/3.jpg",
+            "/projects/4.jpg",
+            "/projects/5.jpg"
         ]
     }
 ];
@@ -780,7 +743,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$movies$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/movies.ts [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$GridBackground$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/GridBackground.tsx [app-ssr] (ecmascript)");
 'use client';
 ;
@@ -789,26 +751,21 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$GridBackground
 ;
 ;
 ;
-;
 function WorkShowcase() {
     const [selectedMovieId, setSelectedMovieId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$movies$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["movies"][0].id);
-    const [viewMode, setViewMode] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('trailer');
     const videoRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const selectedMovie = __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$movies$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["movies"].find((m)=>m.id === selectedMovieId) || __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$movies$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["movies"][0];
-    // Reset view mode to trailer when switching movies
     const handleMovieSelect = (id)=>{
         setSelectedMovieId(id);
-        setViewMode('trailer');
     };
-    // Auto-play video when movie or mode changes
+    // Auto-play video when movie changes
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        if (viewMode === 'trailer' && videoRef.current) {
+        if (videoRef.current) {
             videoRef.current.load();
             videoRef.current.play().catch((e)=>console.log('Autoplay prevented:', e));
         }
     }, [
-        selectedMovieId,
-        viewMode
+        selectedMovieId
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "work",
@@ -816,7 +773,7 @@ function WorkShowcase() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$GridBackground$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/components/WorkShowcase.tsx",
-                lineNumber: 33,
+                lineNumber: 30,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -826,7 +783,7 @@ function WorkShowcase() {
                         className: "w-full md:w-2/3 lg:w-3/5 aspect-video relative bg-black rounded-3xl overflow-hidden shadow-2xl border border-white/10",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
                             mode: "wait",
-                            children: viewMode === 'trailer' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                                 initial: {
                                     opacity: 0
                                 },
@@ -847,8 +804,8 @@ function WorkShowcase() {
                                     allowFullScreen: true
                                 }, void 0, false, {
                                     fileName: "[project]/components/WorkShowcase.tsx",
-                                    lineNumber: 50,
-                                    columnNumber: 37
+                                    lineNumber: 46,
+                                    columnNumber: 33
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
                                     ref: videoRef,
                                     className: "w-full h-full object-cover",
@@ -862,74 +819,29 @@ function WorkShowcase() {
                                             type: "video/mp4"
                                         }, void 0, false, {
                                             fileName: "[project]/components/WorkShowcase.tsx",
-                                            lineNumber: 65,
-                                            columnNumber: 41
+                                            lineNumber: 61,
+                                            columnNumber: 37
                                         }, this),
                                         "Your browser does not support the video tag."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/WorkShowcase.tsx",
-                                    lineNumber: 57,
-                                    columnNumber: 37
+                                    lineNumber: 53,
+                                    columnNumber: 33
                                 }, this)
                             }, `video-${selectedMovie.id}`, false, {
                                 fileName: "[project]/components/WorkShowcase.tsx",
-                                lineNumber: 41,
-                                columnNumber: 29
-                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                initial: {
-                                    opacity: 0
-                                },
-                                animate: {
-                                    opacity: 1
-                                },
-                                exit: {
-                                    opacity: 0
-                                },
-                                transition: {
-                                    duration: 0.5
-                                },
-                                className: "w-full h-full relative bg-gray-900 grid grid-cols-2 gap-2 p-2 overflow-y-auto",
-                                children: [
-                                    selectedMovie.screenshots.slice(0, 4).map((shot, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "relative aspect-video rounded-lg overflow-hidden",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                src: shot,
-                                                alt: `Screenshot ${idx}`,
-                                                fill: true,
-                                                className: "object-cover hover:scale-105 transition-transform duration-500"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/WorkShowcase.tsx",
-                                                lineNumber: 81,
-                                                columnNumber: 41
-                                            }, this)
-                                        }, idx, false, {
-                                            fileName: "[project]/components/WorkShowcase.tsx",
-                                            lineNumber: 80,
-                                            columnNumber: 37
-                                        }, this)),
-                                    selectedMovie.screenshots.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "col-span-2 flex items-center justify-center text-white/50 font-mono",
-                                        children: "NO VISUALS AVAILABLE"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/WorkShowcase.tsx",
-                                        lineNumber: 90,
-                                        columnNumber: 37
-                                    }, this)
-                                ]
-                            }, `visuals-${selectedMovie.id}`, true, {
-                                fileName: "[project]/components/WorkShowcase.tsx",
-                                lineNumber: 71,
-                                columnNumber: 29
+                                lineNumber: 37,
+                                columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/WorkShowcase.tsx",
-                            lineNumber: 39,
+                            lineNumber: 36,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/WorkShowcase.tsx",
-                        lineNumber: 38,
+                        lineNumber: 35,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -942,20 +854,20 @@ function WorkShowcase() {
                                         children: "OUR WORK"
                                     }, void 0, false, {
                                         fileName: "[project]/components/WorkShowcase.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 74,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "h-1 w-20 bg-frog-pink"
                                     }, void 0, false, {
                                         fileName: "[project]/components/WorkShowcase.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 77,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/WorkShowcase.tsx",
-                                lineNumber: 103,
+                                lineNumber: 73,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -970,7 +882,7 @@ function WorkShowcase() {
                                                     children: movie.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/WorkShowcase.tsx",
-                                                    lineNumber: 123,
+                                                    lineNumber: 93,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -978,20 +890,46 @@ function WorkShowcase() {
                                                     children: movie.year
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/WorkShowcase.tsx",
-                                                    lineNumber: 126,
+                                                    lineNumber: 96,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, movie.id, true, {
                                             fileName: "[project]/components/WorkShowcase.tsx",
-                                            lineNumber: 115,
+                                            lineNumber: 85,
                                             columnNumber: 29
                                         }, this)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "w-full h-px bg-gray-300 my-2"
                                     }, void 0, false, {
                                         fileName: "[project]/components/WorkShowcase.tsx",
-                                        lineNumber: 134,
+                                        lineNumber: 104,
+                                        columnNumber: 25
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                        href: `/movies/${selectedMovie.slug}#visuals`,
+                                        className: "flex items-center gap-4 text-left group text-gray-600 hover:text-black hover:translate-x-2 transition-all duration-300",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "w-12 h-8 border border-current rounded-full flex items-center justify-center font-mono text-[10px]",
+                                                children: "01"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/WorkShowcase.tsx",
+                                                lineNumber: 111,
+                                                columnNumber: 29
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "font-space font-bold text-2xl uppercase tracking-tighter",
+                                                children: "VISUALS"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/WorkShowcase.tsx",
+                                                lineNumber: 114,
+                                                columnNumber: 29
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/WorkShowcase.tsx",
+                                        lineNumber: 107,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1003,7 +941,7 @@ function WorkShowcase() {
                                                 children: "02"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/WorkShowcase.tsx",
-                                                lineNumber: 154,
+                                                lineNumber: 123,
                                                 columnNumber: 29
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1011,37 +949,37 @@ function WorkShowcase() {
                                                 children: "FILM DETAILS"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/WorkShowcase.tsx",
-                                                lineNumber: 157,
+                                                lineNumber: 126,
                                                 columnNumber: 29
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/WorkShowcase.tsx",
-                                        lineNumber: 150,
+                                        lineNumber: 119,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/WorkShowcase.tsx",
-                                lineNumber: 111,
+                                lineNumber: 81,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/WorkShowcase.tsx",
-                        lineNumber: 100,
+                        lineNumber: 70,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/WorkShowcase.tsx",
-                lineNumber: 35,
+                lineNumber: 32,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/WorkShowcase.tsx",
-        lineNumber: 32,
+        lineNumber: 29,
         columnNumber: 9
     }, this);
 }
@@ -1138,17 +1076,41 @@ function AboutSection() {
                                 className: "text-left",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "mb-8",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                className: "text-4xl font-space font-bold tracking-tighter text-black mb-2",
+                                                children: "ABOUT US"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/AboutSection.tsx",
+                                                lineNumber: 38,
+                                                columnNumber: 33
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "h-1 w-20 bg-frog-pink"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/AboutSection.tsx",
+                                                lineNumber: 41,
+                                                columnNumber: 33
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/AboutSection.tsx",
+                                        lineNumber: 37,
+                                        columnNumber: 29
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "space-y-6 text-base md:text-lg text-black/70 font-light leading-relaxed mb-10",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "Pink Frog Films champions immersive narratives that bridge the gap between regional authenticity and international appeal. Their body of work, featuring the acclaimed documentary feature Lords of Lockdown and the horror-noir short Chingum, demonstrates their commitment to transforming local nuances into universal cinema. The studio is led by founders Momita Jaisi and Mihir Fadnavis, who bring a wealth of diverse experience to their storytelling. Jaisi, formerly the Scheduler at the MAMI Film Festival, specialises in international co-productions, while Fadnavis is a journalist-turned-filmmaker known for his multi-perspective narrative style and his ability to blend gritty realism with genre elements."
                                         }, void 0, false, {
                                             fileName: "[project]/components/AboutSection.tsx",
-                                            lineNumber: 39,
+                                            lineNumber: 44,
                                             columnNumber: 33
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/AboutSection.tsx",
-                                        lineNumber: 38,
+                                        lineNumber: 43,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1157,7 +1119,7 @@ function AboutSection() {
                                         children: "Read More"
                                     }, void 0, false, {
                                         fileName: "[project]/components/AboutSection.tsx",
-                                        lineNumber: 47,
+                                        lineNumber: 52,
                                         columnNumber: 29
                                     }, this)
                                 ]
@@ -1189,12 +1151,12 @@ function AboutSection() {
                                     className: "object-cover w-full h-full hover:scale-105 transition-transform duration-700"
                                 }, void 0, false, {
                                     fileName: "[project]/components/AboutSection.tsx",
-                                    lineNumber: 64,
+                                    lineNumber: 69,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/AboutSection.tsx",
-                                lineNumber: 56,
+                                lineNumber: 61,
                                 columnNumber: 25
                             }, this)
                         ]
@@ -1223,7 +1185,7 @@ function AboutSection() {
                             children: "FEATURED POSTERS"
                         }, void 0, false, {
                             fileName: "[project]/components/AboutSection.tsx",
-                            lineNumber: 77,
+                            lineNumber: 82,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1264,7 +1226,7 @@ function AboutSection() {
                                                 className: "w-full h-full object-cover"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/AboutSection.tsx",
-                                                lineNumber: 100,
+                                                lineNumber: 105,
                                                 columnNumber: 37
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1276,44 +1238,44 @@ function AboutSection() {
                                                         strokeWidth: 1.5
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/AboutSection.tsx",
-                                                        lineNumber: 107,
+                                                        lineNumber: 112,
                                                         columnNumber: 45
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/AboutSection.tsx",
-                                                    lineNumber: 106,
+                                                    lineNumber: 111,
                                                     columnNumber: 41
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/AboutSection.tsx",
-                                                lineNumber: 105,
+                                                lineNumber: 110,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, `${poster.id}-${i}`, true, {
                                         fileName: "[project]/components/AboutSection.tsx",
-                                        lineNumber: 93,
+                                        lineNumber: 98,
                                         columnNumber: 33
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/AboutSection.tsx",
-                                lineNumber: 82,
+                                lineNumber: 87,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/AboutSection.tsx",
-                            lineNumber: 81,
+                            lineNumber: 86,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/AboutSection.tsx",
-                    lineNumber: 76,
+                    lineNumber: 81,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/AboutSection.tsx",
-                lineNumber: 75,
+                lineNumber: 80,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -1337,12 +1299,12 @@ function AboutSection() {
                                 size: 32
                             }, void 0, false, {
                                 fileName: "[project]/components/AboutSection.tsx",
-                                lineNumber: 131,
+                                lineNumber: 136,
                                 columnNumber: 29
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/AboutSection.tsx",
-                            lineNumber: 127,
+                            lineNumber: 132,
                             columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1356,7 +1318,7 @@ function AboutSection() {
                                     className: "max-h-[85vh] max-w-full object-contain rounded-lg shadow-2xl"
                                 }, void 0, false, {
                                     fileName: "[project]/components/AboutSection.tsx",
-                                    lineNumber: 138,
+                                    lineNumber: 143,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1368,31 +1330,31 @@ function AboutSection() {
                                             size: 20
                                         }, void 0, false, {
                                             fileName: "[project]/components/AboutSection.tsx",
-                                            lineNumber: 150,
+                                            lineNumber: 155,
                                             columnNumber: 33
                                         }, this),
                                         "Download Poster"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/AboutSection.tsx",
-                                    lineNumber: 145,
+                                    lineNumber: 150,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/AboutSection.tsx",
-                            lineNumber: 134,
+                            lineNumber: 139,
                             columnNumber: 25
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/AboutSection.tsx",
-                    lineNumber: 120,
+                    lineNumber: 125,
                     columnNumber: 21
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/AboutSection.tsx",
-                lineNumber: 118,
+                lineNumber: 123,
                 columnNumber: 13
             }, this)
         ]
@@ -1678,7 +1640,7 @@ function Footer() {
                                         href: "/",
                                         className: "inline-block mb-8",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                            src: "/frogfooter.svg",
+                                            src: "/Frog.svg",
                                             alt: "Pink Frog Films",
                                             className: "h-12 md:h-20 w-auto object-contain hover:scale-105 transition-transform"
                                         }, void 0, false, {

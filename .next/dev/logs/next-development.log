@@ -50,3 +50,67 @@ It can also happen if the client has a browser extension installed which messes 
 
 [00:11:40.678] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
 [00:13:26.686] Server  LOG     ✓ Compiled in 648ms
+[00:28:45.701] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:45.935] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="207496627"
+                        >
+                  ...
+
+[00:29:32.021] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:29:51.794] Server  LOG     ✓ Compiled in 343ms
+[00:30:17.675] Server  LOG     ✓ Compiled in 395ms
+[00:30:24.279] Server  LOG     ✓ Compiled in 143ms
+[00:30:29.522] Server  LOG     ✓ Compiled in 303ms
+[00:30:53.196] Server  LOG     ✓ Compiled in 294ms
+[00:31:11.507] Browser WARN    Image with src "/hero-bg.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:31:11.667] Browser WARN    Image with src "/chingum.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:31:11.791] Browser WARN    Image with src "/locks.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:31:29.126] Server  LOG     ○ Compiling /movies/[id] ...
+[00:31:32.413] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:31:58.504] Server  LOG     ✓ Compiled in 1505ms
+[00:32:26.655] Server  LOG     ✓ Compiled in 1143ms
+[00:33:12.066] Server  LOG     ✓ Compiled in 442ms
+[00:34:28.408] Server  LOG     ✓ Compiled in 24ms
+[00:36:07.733] Server  LOG     ✓ Compiled in 272ms
+[00:36:25.229] Server  LOG     ✓ Compiled in 972ms
+[00:37:34.489] Server  LOG     ✓ Compiled in 792ms
+[00:37:51.130] Server  LOG     ✓ Compiled in 962ms
+[00:37:54.685] Server  LOG     ✓ Compiled in 6ms
+[00:38:07.445] Server  LOG     ✓ Compiled in 3.9s
+[00:38:26.086] Browser WARN    Image with src "/projects/01.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:38:26.086] Browser WARN    Image with src "/projects/02.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:38:26.086] Browser WARN    Image with src "/projects/03.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:38:26.086] Browser WARN    Image with src "/projects/04.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:38:29.294] Browser WARN    Image with src "/projects/05.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:39:30.773] Server  LOG     ✓ Compiled in 629ms

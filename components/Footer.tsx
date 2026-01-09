@@ -23,7 +23,7 @@ export default function Footer() {
                     <div className="md:col-span-6">
                         <Link href="/" className="inline-block mb-8">
                             <img
-                                src="/frogfooter.svg"
+                                src="/Frog.svg"
                                 alt="Pink Frog Films"
                                 className="h-12 md:h-20 w-auto object-contain hover:scale-105 transition-transform"
                             />

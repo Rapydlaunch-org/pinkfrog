@@ -9,24 +9,21 @@ import GridBackground from './GridBackground';
 
 export default function WorkShowcase() {
     const [selectedMovieId, setSelectedMovieId] = useState(movies[0].id);
-    const [viewMode, setViewMode] = useState<'trailer' | 'visuals'>('trailer');
     const videoRef = useRef<HTMLVideoElement>(null);
 
     const selectedMovie = movies.find(m => m.id === selectedMovieId) || movies[0];
 
-    // Reset view mode to trailer when switching movies
     const handleMovieSelect = (id: string) => {
         setSelectedMovieId(id);
-        setViewMode('trailer');
     };
 
-    // Auto-play video when movie or mode changes
+    // Auto-play video when movie changes
     useEffect(() => {
-        if (viewMode === 'trailer' && videoRef.current) {
+        if (videoRef.current) {
             videoRef.current.load();
             videoRef.current.play().catch(e => console.log('Autoplay prevented:', e));
         }
-    }, [selectedMovieId, viewMode]);
+    }, [selectedMovieId]);
 
     return (
         <section id="work" className="w-full min-h-screen relative overflow-hidden flex flex-col justify-center py-10 md:py-0">
@@ -37,62 +34,35 @@ export default function WorkShowcase() {
                 {/* Left Side: Viewer (Video or Visuals) */}
                 <div className="w-full md:w-2/3 lg:w-3/5 aspect-video relative bg-black rounded-3xl overflow-hidden shadow-2xl border border-white/10">
                     <AnimatePresence mode="wait">
-                        {viewMode === 'trailer' ? (
-                            <motion.div
-                                key={`video-${selectedMovie.id}`}
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.5 }}
-                                className="w-full h-full relative group"
-                            >
-                                {selectedMovie.video.includes('drive.google.com') ? (
-                                    <iframe
-                                        src={selectedMovie.video}
-                                        className="w-full h-full object-cover"
-                                        allow="autoplay; fullscreen"
-                                        allowFullScreen
-                                    />
-                                ) : (
-                                    <video
-                                        ref={videoRef}
-                                        className="w-full h-full object-cover"
-                                        loop
-                                        muted
-                                        playsInline
-                                        controls
-                                    >
-                                        <source src={selectedMovie.video} type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
-                                )}
-                            </motion.div>
-                        ) : (
-                            <motion.div
-                                key={`visuals-${selectedMovie.id}`}
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.5 }}
-                                className="w-full h-full relative bg-gray-900 grid grid-cols-2 gap-2 p-2 overflow-y-auto"
-                            >
-                                {selectedMovie.screenshots.slice(0, 4).map((shot, idx) => (
-                                    <div key={idx} className="relative aspect-video rounded-lg overflow-hidden">
-                                        <Image
-                                            src={shot}
-                                            alt={`Screenshot ${idx}`}
-                                            fill
-                                            className="object-cover hover:scale-105 transition-transform duration-500"
-                                        />
-                                    </div>
-                                ))}
-                                {selectedMovie.screenshots.length === 0 && (
-                                    <div className="col-span-2 flex items-center justify-center text-white/50 font-mono">
-                                        NO VISUALS AVAILABLE
-                                    </div>
-                                )}
-                            </motion.div>
-                        )}
+                        <motion.div
+                            key={`video-${selectedMovie.id}`}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="w-full h-full relative group"
+                        >
+                            {selectedMovie.video.includes('drive.google.com') ? (
+                                <iframe
+                                    src={selectedMovie.video}
+                                    className="w-full h-full object-cover"
+                                    allow="autoplay; fullscreen"
+                                    allowFullScreen
+                                />
+                            ) : (
+                                <video
+                                    ref={videoRef}
+                                    className="w-full h-full object-cover"
+                                    loop
+                                    muted
+                                    playsInline
+                                    controls
+                                >
+                                    <source src={selectedMovie.video} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            )}
+                        </motion.div>
                     </AnimatePresence>
                 </div>
 
@@ -134,10 +104,9 @@ export default function WorkShowcase() {
                         <div className="w-full h-px bg-gray-300 my-2"></div>
 
                         {/* Actions for Selected Movie */}
-                        {/* <button
-                            onClick={() => setViewMode('visuals')}
-                            className={`flex items-center gap-4 text-left group transition-all duration-300 ${viewMode === 'visuals' ? 'text-frog-pink translate-x-4' : 'text-gray-600 hover:text-black hover:translate-x-2'
-                                }`}
+                        <Link
+                            href={`/movies/${selectedMovie.slug}#visuals`}
+                            className="flex items-center gap-4 text-left group text-gray-600 hover:text-black hover:translate-x-2 transition-all duration-300"
                         >
                             <span className="w-12 h-8 border border-current rounded-full flex items-center justify-center font-mono text-[10px]">
                                 01
@@ -145,7 +114,7 @@ export default function WorkShowcase() {
                             <span className="font-space font-bold text-2xl uppercase tracking-tighter">
                                 VISUALS
                             </span>
-                        </button> */}
+                        </Link>
 
                         <Link
                             href={`/movies/${selectedMovie.slug}`}

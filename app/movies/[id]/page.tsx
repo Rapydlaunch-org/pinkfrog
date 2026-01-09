@@ -94,7 +94,7 @@ export default function MovieDetailPage() {
             </section>
 
             {/* Screenshots Gallery - Auto Scrolling */}
-            <section className="py-24 border-t border-white/5 bg-[#080808] overflow-hidden">
+            <section id="visuals" className="py-24 border-t border-white/5 bg-[#080808] overflow-hidden">
                 <div className="px-6 md:px-12 mb-12 flex justify-between items-end">
                     <h3 className="text-3xl md:text-5xl font-space font-bold uppercase">VISUALS</h3>
                 </div>

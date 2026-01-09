@@ -34,7 +34,12 @@ export default function AboutSection() {
                             className="text-left"
                         >
 
-
+                            <div className="mb-8">
+                                <h2 className="text-4xl font-space font-bold tracking-tighter text-black mb-2">
+                                    ABOUT US
+                                </h2>
+                                <div className="h-1 w-20 bg-frog-pink"></div>
+                            </div>
                             <div className="space-y-6 text-base md:text-lg text-black/70 font-light leading-relaxed mb-10">
                                 <p>
                                     Pink Frog Films champions immersive narratives that bridge the gap between regional authenticity and international appeal.

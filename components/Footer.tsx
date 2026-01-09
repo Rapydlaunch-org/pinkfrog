@@ -4,138 +4,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
-const FooterInsect = ({ id, x, y }: { id: number, x: number, y: number }) => (
-    <motion.div
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 0.8, opacity: 0.2, x: [0, 10, -10, 0], y: [0, -10, 10, 0] }}
-        exit={{ scale: 0, opacity: 0 }}
-        className="absolute pointer-events-none z-0"
-        style={{ left: x, top: y }}
-    >
-        <div className="w-2 h-2 bg-black/10 rounded-full relative">
-            <div className="absolute -left-1 -top-0.5 w-2 h-1 bg-black/5 rounded-full rotate-45" />
-            <div className="absolute -right-1 -top-0.5 w-2 h-1 bg-black/5 rounded-full -rotate-45" />
-        </div>
-    </motion.div>
-);
-
-const FooterJumpingFrog = ({ index, onJump, tongueTarget }: { index: number, onJump: (x: number, y: number) => void, tongueTarget: { x: number, y: number } | null }) => {
-    const [isJumping, setIsJumping] = useState(false);
-    const startX = (index * 20) + Math.random() * 10; // Distribute across width
-
-    return (
-        <motion.div
-            initial={{ x: `${startX}%`, y: '85%' }}
-            animate={{
-                x: [`${startX}%`, `${startX + 5}%`, `${startX - 5}%`, `${startX}%`],
-                y: ['85%', '65%', '85%', '65%', '85%']
-            }}
-            transition={{
-                duration: 8 + Math.random() * 4,
-                repeat: Infinity,
-                ease: "easeInOut"
-            }}
-            onUpdate={(latest: any) => {
-                const yVal = parseFloat(latest.y);
-                const xVal = parseFloat(latest.x);
-                if (yVal < 75 && !isJumping) {
-                    setIsJumping(true);
-                    onJump(xVal, yVal);
-                } else if (yVal > 80) {
-                    setIsJumping(false);
-                }
-            }}
-            className="absolute w-12 h-12 md:w-16 md:h-16 pointer-events-none"
-        >
-            <div className="relative w-full h-full">
-                <AnimatePresence>
-                    {tongueTarget && (
-                        <motion.div
-                            initial={{ height: 0 }}
-                            animate={{ height: 40 }}
-                            exit={{ height: 0 }}
-                            className="absolute bg-frog-pink origin-top rounded-full"
-                            style={{
-                                width: '3px',
-                                left: '50%',
-                                top: '40%',
-                                rotate: Math.atan2(tongueTarget.y - 85, tongueTarget.x - startX) * (180 / Math.PI) - 90,
-                            }}
-                        />
-                    )}
-                </AnimatePresence>
-                <svg viewBox="0 0 100 100" className="w-full h-full opacity-60">
-                    <ellipse cx="50" cy="60" rx="35" ry="25" fill="#FF69B4" fillOpacity="0.4" />
-                    <circle cx="30" cy="35" r="12" fill="#FF69B4" fillOpacity="0.4" />
-                    <circle cx="70" cy="35" r="12" fill="#FF69B4" fillOpacity="0.4" />
-                    <circle cx="30" cy="35" r="8" fill="white" fillOpacity="0.3" />
-                    <circle cx="70" cy="35" r="8" fill="white" fillOpacity="0.3" />
-                    <circle cx="30" cy="35" r="4" fill="#2CCC4C" fillOpacity="0.4" />
-                    <circle cx="70" cy="35" r="4" fill="#2CCC4C" fillOpacity="0.4" />
-                </svg>
-            </div>
-        </motion.div>
-    );
-};
 
 export default function Footer() {
-    const [insects, setInsects] = useState<{ id: number; x: number; y: number }[]>([]);
-    const [tongueTargets, setTongueTargets] = useState<({ x: number; y: number } | null)[]>([null, null, null, null, null]);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (insects.length < 10) {
-                setInsects(prev => [...prev, {
-                    id: Date.now(),
-                    x: Math.random() * 100,
-                    y: 20 + Math.random() * 60
-                }]);
-            }
-        }, 1500);
-        return () => clearInterval(interval);
-    }, [insects.length]);
-
-    const handleJump = (frogIndex: number, frogX: number, frogY: number) => {
-        const targetInsect = insects.find(insect => {
-            const dist = Math.sqrt(Math.pow(insect.x - frogX, 2) + Math.pow(insect.y - frogY, 2));
-            return dist < 20;
-        });
-
-        if (targetInsect) {
-            setTongueTargets(prev => {
-                const next = [...prev];
-                next[frogIndex] = { x: targetInsect.x, y: targetInsect.y };
-                return next;
-            });
-            setTimeout(() => {
-                setInsects(prev => prev.filter(i => i.id !== targetInsect.id));
-                setTongueTargets(prev => {
-                    const next = [...prev];
-                    next[frogIndex] = null;
-                    return next;
-                });
-            }, 200);
-        }
-    };
+    const [showModal, setShowModal] = useState(false);
 
     return (
         <footer className="bg-white text-black py-20 px-6 md:px-12 border-t border-frog-pink/10 relative overflow-hidden">
-            {/* Footer Frogs Animation Layer */}
-            <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-50">
-                <AnimatePresence>
-                    {insects.map(insect => (
-                        <FooterInsect key={insect.id} id={insect.id} x={`${insect.x}%` as any} y={`${insect.y}%` as any} />
-                    ))}
-                </AnimatePresence>
-                {[0, 1, 2, 3, 4].map((i) => (
-                    <FooterJumpingFrog
-                        key={i}
-                        index={i}
-                        onJump={(x, y) => handleJump(i, x, y)}
-                        tongueTarget={tongueTargets[i]}
-                    />
-                ))}
-            </div>
+            {/* Big Green Frog Bottom Right */}
+            <img
+                src="/frogfooter.svg"
+                alt=""
+                className="absolute -bottom-[100px] -right-[40px] w-[350px] md:w-[500px] opacity-100 pointer-events-none select-none z-0 transform rotate-[-10deg]"
+            />
 
             <div className="max-w-[1400px] mx-auto relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 md:mb-20">
@@ -143,18 +23,18 @@ export default function Footer() {
                     <div className="md:col-span-6">
                         <Link href="/" className="inline-block mb-8">
                             <img
-                                src="/logo.svg"
+                                src="/frogfooter.svg"
                                 alt="Pink Frog Films"
-                                className="h-12 md:h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                                className="h-12 md:h-20 w-auto object-contain hover:scale-105 transition-transform"
                             />
                         </Link>
                         <h2 className="text-[10vw] md:text-[4vw] leading-[0.9] font-space font-medium tracking-tighter mb-8">
                             LET'S TELL <br />
                             <span className="text-outline">YOUR STORY.</span>
                         </h2>
-                        <Link
-                            href="/contact"
-                            className="inline-flex items-center gap-6 md:gap-8 group"
+                        <button
+                            onClick={() => setShowModal(true)}
+                            className="inline-flex items-center gap-6 md:gap-8 group text-left"
                         >
                             <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-frog-green/30 flex items-center justify-center group-hover:bg-frog-green group-hover:border-frog-green transition-all duration-500 overflow-hidden">
                                 <motion.div
@@ -167,8 +47,10 @@ export default function Footer() {
                                 </motion.div>
                                 <div className="absolute inset-0 bg-frog-pink translate-y-full group-hover:translate-y-0 transition-transform duration-500 opacity-20" />
                             </div>
-                            <span className="font-mono text-xs md:text-sm tracking-[0.4em] uppercase text-black/40 group-hover:text-frog-green transition-colors font-bold">Start a Project</span>
-                        </Link>
+                            <span className="font-mono text-xs md:text-sm tracking-[0.4em] uppercase text-black/40 group-hover:text-frog-green transition-colors font-bold">
+                                LETS CONNECT
+                            </span>
+                        </button>
                     </div>
 
                     {/* Links Section */}
@@ -198,13 +80,15 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Contact Section */}
+                    {/* Contact Section - Updated */}
                     <div className="md:col-span-3">
-                        <h3 className="font-mono text-[10px] text-frog-green font-bold tracking-[0.3em] uppercase mb-6 md:mb-8">Contact</h3>
-                        <div className="space-y-4 font-mono text-[10px] md:text-xs text-black/60">
-                            <p className="font-bold">GUWAHATI, ASSAM</p>
-                            <p>NORTH EAST INDIA</p>
-                            <a href="mailto:hello@pinkfrog.studio" className="block hover:text-frog-pink transition-colors font-bold">HELLO@PINKFROG.STUDIO</a>
+                        <h3 className="font-mono text-[10px] text-frog-green font-bold tracking-[0.3em] uppercase mb-6 md:mb-8">SOCIALS</h3>
+                        <div className="flex flex-col gap-4 font-mono text-[10px] md:text-xs text-black/60">
+                            {['INSTAGRAM', 'VIMEO', 'LINKEDIN'].map((social) => (
+                                <a key={social} href="#" className="hover:text-frog-green transition-colors font-bold tracking-widest">
+                                    {social}
+                                </a>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -219,15 +103,68 @@ export default function Footer() {
                             Designed and developed by <a href="https://kalp.ltd" target="_blank" rel="noopener noreferrer" className="text-frog-green/60 hover:text-frog-pink transition-colors cursor-pointer">Kalp Intelligence (Kalp.ltd)</a>
                         </div>
                     </div>
-                    <div className="flex flex-wrap gap-6 md:gap-8">
-                        {['INSTAGRAM', 'VIMEO', 'LINKEDIN'].map((social) => (
-                            <a key={social} href="#" className="font-mono text-[8px] md:text-[10px] text-black/40 hover:text-frog-green tracking-widest transition-colors font-bold">
-                                {social}
-                            </a>
-                        ))}
-                    </div>
                 </div>
             </div>
-        </footer>
+
+            {/* Contact Modal */}
+            <AnimatePresence>
+                {showModal && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setShowModal(false)}
+                        className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-md flex items-center justify-center p-4"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, y: 20 }}
+                            animate={{ scale: 1, y: 0 }}
+                            exit={{ scale: 0.9, y: 20 }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="w-full max-w-2xl bg-[#0a0a0a] rounded-3xl overflow-hidden shadow-2xl relative flex flex-col md:flex-row min-h-[400px]"
+                        >
+                            <button
+                                onClick={() => setShowModal(false)}
+                                className="absolute top-6 right-6 z-20 text-white/50 hover:text-white transition-colors"
+                            >
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </button>
+
+                            {/* Left: Contact Info */}
+                            <div className="w-full md:w-3/5 p-12 flex flex-col justify-center text-white relative z-10">
+                                <div className="space-y-8">
+                                    <div>
+                                        <h3 className="font-space text-3xl font-bold mb-2">MOMITA JAISI</h3>
+                                        <p className="font-mono text-frog-green tracking-widest text-sm uppercase">CEO, Pink Frog Films</p>
+                                    </div>
+
+                                    <div className="space-y-4 font-mono text-sm md:text-base text-gray-300">
+                                        <a href="mailto:momitajaisi@pinkfrogfilms.in" className="flex items-center gap-3 hover:text-frog-pink transition-colors">
+                                            <span className="w-8 h-[1px] bg-gray-500"></span>
+                                            momitajaisi@pinkfrogfilms.in
+                                        </a>
+                                        <div className="flex items-center gap-3">
+                                            <span className="w-8 h-[1px] bg-gray-500"></span>
+                                            +91 9867992549
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Right: Frog Illustration */}
+                            <div className="w-full md:w-2/5 relative flex items-end justify-center overflow-hidden">
+                                <img
+                                    src="/frogfooter.svg"
+                                    alt="Pink Frog"
+                                    className="w-[160%] max-w-none absolute -bottom-[10%] -right-[15%] opacity-100 transform rotate-0"
+                                />
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </footer >
     );
 }

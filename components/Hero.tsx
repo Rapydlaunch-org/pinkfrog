@@ -117,7 +117,7 @@ export default function Hero() {
             </div>
 
             <motion.div
-                className="w-full max-w-[1400px] px-6 md:px-12 relative z-10 flex flex-col items-start pt-32 md:pt-40"
+                className="w-full max-w-[1400px] px-6 md:px-12 relative z-10 flex flex-col items-start h-screen py-32 md:py-40 justify-between"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -131,34 +131,37 @@ export default function Hero() {
                     [ FEATURED PRODUCTION 2025 ]
                 </motion.div>
 
-                {/* Main Title - Massive & Minimal */}
-                <motion.h1
-                    className="text-[15vw] md:text-[8vw] leading-[0.85] font-space font-medium tracking-tighter mb-8 md:mb-12 text-black"
-                    variants={itemVariants}
-                >
-                    VOICES OF
-                    <br />
-                    <span className="text-outline min-h-[1.1em] inline-block">
-                        {displayHeading}
-                        <span className="inline-block w-[2px] md:w-[4px] h-[0.8em] bg-frog-pink ml-1 md:ml-2 animate-pulse align-middle" />
-                    </span>
-                </motion.h1>
 
-                {/* Bottom Info Grid */}
-                <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-end gap-8 md:gap-12 mt-8 md:mt-12">
-                    <motion.div variants={itemVariants} className="max-w-md min-h-[80px] md:min-h-[100px]">
+
+                <div className="w-full flex flex-col md:flex-row justify-between items-end gap-8 md:gap-12 mt-auto">
+                    <div className="flex flex-col items-start gap-8">
+                        {/* Main Title - Smaller & Bottom Left */}
+                        <motion.h1
+                            className="text-4xl md:text-6xl leading-[0.9] font-space font-medium tracking-tighter text-black text-left"
+                            variants={itemVariants}
+                        >
+                            VOICES OF
+                            <br />
+                            <span className="text-outline min-h-[1.1em] inline-block">
+                                {displayHeading}
+                                <span className="inline-block w-[2px] md:w-[4px] h-[0.8em] bg-frog-pink ml-1 md:ml-2 animate-pulse align-middle" />
+                            </span>
+                        </motion.h1>
+
+                        <motion.div variants={itemVariants} className="flex flex-col items-start gap-4">
+                            <div className="font-mono text-[10px] text-frog-green font-bold tracking-widest uppercase">
+                                Scroll to explore
+                            </div>
+                            <div className="w-full md:w-[3px] h-[1px] md:h-24 bg-gradient-to-r md:bg-gradient-to-b from-frog-green via-frog-pink to-transparent" />
+                        </motion.div>
+                    </div>
+
+                    <motion.div variants={itemVariants} className="max-w-md min-h-[80px] md:min-h-[100px] text-right">
                         <p className="text-base md:text-xl text-black/60 leading-relaxed font-light font-mono">
                             <span className="text-frog-green mr-2">{">"}</span>
                             {displayText}
                             <span className="inline-block w-[2px] h-[1em] bg-frog-green ml-1 animate-pulse align-middle" />
                         </p>
-                    </motion.div>
-
-                    <motion.div variants={itemVariants} className="flex flex-col items-start md:items-end gap-4 w-full md:w-auto">
-                        <div className="font-mono text-[10px] text-frog-green font-bold tracking-widest uppercase">
-                            Scroll to explore
-                        </div>
-                        <div className="w-full md:w-[3px] h-[1px] md:h-24 bg-gradient-to-r md:bg-gradient-to-b from-frog-green via-frog-pink to-transparent" />
                     </motion.div>
                 </div>
             </motion.div>

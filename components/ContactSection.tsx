@@ -38,7 +38,7 @@ export default function ContactSection() {
                                 </label>
                                 <input
                                     type="email"
-                                    placeholder="your@email.com"
+                                    placeholder="your@gmail.com"
                                     className="w-full bg-transparent border-b border-black/20 pb-4 text-xl text-black placeholder-black/20 focus:outline-none focus:border-frog-green transition-colors font-space"
                                 />
                             </div>
@@ -50,7 +50,7 @@ export default function ContactSection() {
                             </label>
                             <textarea
                                 rows={4}
-                                placeholder="Tell us about your project..."
+                                placeholder="Tell us about your query..."
                                 className="w-full bg-transparent border-b border-black/20 pb-4 text-xl text-black placeholder-black/20 focus:outline-none focus:border-frog-green transition-colors font-space resize-none"
                             />
                         </div>

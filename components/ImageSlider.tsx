@@ -8,62 +8,62 @@ const slides = [
     // Lords of Lockdown
     {
         id: 1,
-        image: '/projects/lords-of-lockdown/lol-poster-2.jpg',
+        image: '/projects/01.jpg',
         title: 'LORDS OF LOCKDOWN',
         subtitle: 'A gripping tale of resilience and humanity'
     },
     {
         id: 2,
-        image: '/projects/lords-of-lockdown/lol-stills-11.jpg',
+        image: '/projects/02.jpg',
         title: 'LORDS OF LOCKDOWN',
         subtitle: 'Capturing the unseen moments of the pandemic'
     },
     {
         id: 3,
-        image: '/projects/lords-of-lockdown/lol-stills-3.jpg',
+        image: '/projects/03.jpg',
         title: 'LORDS OF LOCKDOWN',
         subtitle: 'Stories that echo through silence'
     },
     {
         id: 4,
-        image: '/projects/lords-of-lockdown/lol-stills-4.jpg',
+        image: '/projects/04.jpg',
         title: 'LORDS OF LOCKDOWN',
         subtitle: 'Witness the power of human connection'
     },
     {
         id: 5,
-        image: '/projects/lords-of-lockdown/lol-stills-5.jpg',
+        image: '/projects/05.jpg',
         title: 'LORDS OF LOCKDOWN',
         subtitle: 'Every face tells a story of survival'
     },
     {
         id: 6,
-        image: '/projects/lords-of-lockdown/lol-stills-7.jpg',
-        title: 'LORDS OF LOCKDOWN',
+        image: '/projects/1.jpg',
+        title: 'CHINGUM',
         subtitle: 'Navigating the shadows of uncertainty'
     },
     {
         id: 7,
-        image: '/projects/lords-of-lockdown/lol-stills-9.jpg',
-        title: 'LORDS OF LOCKDOWN',
+        image: '/projects/2.jpg',
+        title: 'CHINGUM',
         subtitle: 'Hope shines brightest in the dark'
     },
     // Chingum
     {
         id: 8,
-        image: '/projects/chingum/chingum-poster-1.jpg',
+        image: '/projects/3.jpg',
         title: 'CHINGUM',
         subtitle: 'A vibrant journey of colors and emotions'
     },
     {
         id: 9,
-        image: '/projects/chingum/chingum-stills-1.jpg',
+        image: '/projects/4.jpg',
         title: 'CHINGUM',
         subtitle: 'Celebrating the spirit of youth and dreams'
     },
     {
         id: 10,
-        image: '/projects/chingum/chingum-stills-2.jpg',
+        image: '/projects/5.jpg',
         title: 'CHINGUM',
         subtitle: 'Moments that stick with you forever'
     },
@@ -119,20 +119,20 @@ export default function ImageSlider() {
             </AnimatePresence>
 
             {/* Content Overlay */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center px-6 md:px-12 z-10 w-full">
+            <div className="absolute inset-0 flex flex-col justify-end items-start px-6 md:px-12 z-10 w-full pb-32 md:pb-20">
                 <AnimatePresence mode="wait">
                     <motion.div
-                        key={`content-${currentIndex}`}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
+                        key={`title-${currentIndex}`}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -20 }}
                         transition={{ duration: 0.6, ease: "easeInOut" }}
-                        className="text-center max-w-7xl w-full"
+                        className="text-left w-full max-w-4xl"
                     >
-                        <h1 className="text-[12vw] md:text-[9vw] leading-[0.9] font-changa font-medium tracking-tighter mb-6 text-white uppercase drop-shadow-lg">
+                        <h1 className="text-4xl md:text-6xl leading-[0.9] font-changa font-medium tracking-tighter text-white uppercase drop-shadow-lg mb-4">
                             {slides[currentIndex].title}
                         </h1>
-                        <p className="text-lg md:text-2xl text-white/80 font-light font-mono tracking-wide">
+                        <p className="text-lg md:text-xl text-white/80 font-light font-mono tracking-wide">
                             {slides[currentIndex].subtitle}
                         </p>
                     </motion.div>

@@ -1,18 +1,30 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import { X, Download, Maximize2 } from 'lucide-react';
+
+const posters = [
+    { id: 1, src: '/projects/poster1.jpeg', alt: 'Poster 1' },
+    { id: 2, src: '/projects/poster2.jpg', alt: 'Poster 2' },
+    { id: 3, src: '/projects/poster3.jpeg', alt: 'Poster 3' },
+    { id: 4, src: '/projects/poster4.jpg', alt: 'Poster 4' },
+    { id: 5, src: '/projects/poster5.jpg', alt: 'Poster 5' },
+    { id: 6, src: '/projects/poster6.jpg', alt: 'Poster 6' },
+    { id: 7, src: '/projects/poster7.jpg', alt: 'Poster 7' },
+    { id: 8, src: '/projects/poster8.jpg', alt: 'Poster 8' },
+];
 
 export default function AboutSection() {
-    const [isExpanded, setIsExpanded] = useState(false);
+    const [selectedPoster, setSelectedPoster] = useState<typeof posters[0] | null>(null);
 
     return (
         <section id="about" className="relative w-full text-black">
 
             {/* 1. Minimal Full-Screen About Intro */}
-            <div className="h-screen w-full flex flex-col items-center justify-center relative px-6 md:px-12 py-20 overflow-hidden bg-white/50 backdrop-blur-md">
-                <div className="max-w-7xl mx-auto w-full z-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div className="min-h-screen w-full flex flex-col items-center justify-center relative px-6 md:px-12 py-20 overflow-hidden bg-white/50 backdrop-blur-md">
+                <div className="max-w-7xl mx-auto w-full z-10 my-auto">
+                    <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                         {/* LEFT: Text Content */}
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
@@ -21,18 +33,13 @@ export default function AboutSection() {
                             transition={{ duration: 0.8 }}
                             className="text-left"
                         >
-                            <div className="flex items-center gap-4 mb-8">
-                                <span className="font-mono text-xs text-frog-green font-bold tracking-[0.3em] uppercase">WHO WE ARE</span>
-                                <div className="w-12 h-[2px] bg-frog-green/50" />
+
+
+                            <div className="space-y-6 text-base md:text-lg text-black/70 font-light leading-relaxed mb-10">
+                                <p>
+                                    PINK FROG FILMS IS A DYNAMIC FILM STUDIO CRAFTING DISTINCT, COLORFUL NARRATIVES THAT LEAP OFF THE SCREEN AND INTO THE CULTURAL CONVERSATION. WE STRIVE TO CAPTURE THE AUTHENTIC VOICE OF NORTHEAST INDIA, SHARING ITS UNTOLD NUANCES WITH THE WORLD.
+                                </p>
                             </div>
-
-                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-changa font-medium tracking-tight mb-8 leading-tight">
-                                We champion immersive narratives bridging <span className="text-frog-green">authenticity</span> & <span className="text-frog-pink">innovation</span>.
-                            </h2>
-
-                            <p className="text-xl md:text-2xl text-black/60 font-light leading-relaxed mb-10">
-                                Pink Frog Films is dedicated to the untold stories of North East India. From the acclaimed documentary <span className="text-black font-medium">Lords of Lockdown</span> and the horror-noir <span className="text-black font-medium">Chingum</span>, we transform local nuances into universal cinema.
-                            </p>
 
                             <a
                                 href="/mihir-and-me"
@@ -61,29 +68,89 @@ export default function AboutSection() {
                 </div>
             </div>
 
-            {/* 2. Team / Stats Section */}
-            <div className="py-20 px-6 border-t border-black/5 bg-black/5 backdrop-blur-sm">
-                <div className="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-12">
-                    {[
-                        { label: 'PROJECTS', value: '50+' },
-                        { label: 'AWARDS', value: '12' },
-                        { label: 'YEARS', value: '08' },
-                        { label: 'CLIENTS', value: '30+' },
-                    ].map((stat, i) => (
+            {/* 2. Scrollable Posters Section */}
+            <div className="py-20 border-t border-black/5 bg-black/5 backdrop-blur-sm overflow-hidden">
+                <div className="w-full">
+                    <h3 className="font-mono text-xs text-frog-green font-bold tracking-[0.3em] uppercase mb-8 ml-6 md:ml-12 max-w-[1600px] mx-auto">
+                        FEATURED POSTERS
+                    </h3>
+
+                    <div className="relative w-full overflow-hidden">
                         <motion.div
-                            key={stat.label}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: i * 0.1 }}
-                            className="text-center"
+                            className="flex gap-8 w-max"
+                            animate={{ x: ["0%", "-50%"] }}
+                            transition={{
+                                repeat: Infinity,
+                                ease: "linear",
+                                duration: 30,
+                            }}
+                            whileHover={{ animationPlayState: "paused" }}
                         >
-                            <div className="text-4xl md:text-6xl font-space font-medium text-black mb-2">{stat.value}</div>
-                            <div className="font-mono text-[10px] text-frog-green font-bold tracking-widest uppercase">{stat.label}</div>
+                            {[...posters, ...posters].map((poster, i) => (
+                                <motion.div
+                                    key={`${poster.id}-${i}`}
+                                    className="relative group w-[280px] md:w-[360px] aspect-[2/3] flex-shrink-0 cursor-pointer overflow-hidden rounded-2xl shadow-xl border border-white/20 select-none bg-white"
+                                    onClick={() => setSelectedPoster(poster)}
+                                    whileHover={{ scale: 1.02, y: -5 }}
+                                    transition={{ duration: 0.3 }}
+                                >
+                                    <img
+                                        src={poster.src}
+                                        alt={poster.alt}
+                                        className="w-full h-full object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                        <div className="bg-white/20 backdrop-blur-md p-4 rounded-full border border-white/30 text-white transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                                            <Maximize2 size={32} strokeWidth={1.5} />
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            ))}
                         </motion.div>
-                    ))}
+                    </div>
                 </div>
             </div>
+
+            {/* Poster Preview Modal */}
+            <AnimatePresence>
+                {selectedPoster && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedPoster(null)}
+                        className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl flex items-center justify-center p-4 md:p-8"
+                    >
+                        <button
+                            onClick={() => setSelectedPoster(null)}
+                            className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors"
+                        >
+                            <X size={32} />
+                        </button>
+
+                        <div
+                            className="relative max-h-full max-w-full flexflex-col items-center"
+                            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking image area
+                        >
+                            <motion.img
+                                layoutId={`poster-${selectedPoster.id}`}
+                                src={selectedPoster.src}
+                                alt={selectedPoster.alt}
+                                className="max-h-[85vh] max-w-full object-contain rounded-lg shadow-2xl"
+                            />
+
+                            <a
+                                href={selectedPoster.src}
+                                download
+                                className="mt-6 mx-auto flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-bold font-space uppercase tracking-wider hover:scale-105 transition-transform w-fit"
+                            >
+                                <Download size={20} />
+                                Download Poster
+                            </a>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
 
 

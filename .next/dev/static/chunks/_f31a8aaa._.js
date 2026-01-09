@@ -241,79 +241,79 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 const slides = [
-    // Lords of Lockdown
+    // Chingum
     {
         id: 1,
-        image: '/projects/01.jpg',
-        title: 'LORDS OF LOCKDOWN',
-        subtitle: 'A gripping tale of resilience and humanity'
-    },
-    {
-        id: 2,
-        image: '/projects/02.jpg',
-        title: 'LORDS OF LOCKDOWN',
-        subtitle: 'Capturing the unseen moments of the pandemic'
-    },
-    {
-        id: 3,
-        image: '/projects/03.jpg',
-        title: 'LORDS OF LOCKDOWN',
-        subtitle: 'Stories that echo through silence'
-    },
-    {
-        id: 4,
-        image: '/projects/04.jpg',
-        title: 'LORDS OF LOCKDOWN',
-        subtitle: 'Witness the power of human connection'
-    },
-    {
-        id: 5,
-        image: '/projects/05.jpg',
-        title: 'LORDS OF LOCKDOWN',
-        subtitle: 'Every face tells a story of survival'
-    },
-    {
-        id: 6,
-        image: '/projects/1.jpg',
+        image: '/projects/3.jpg',
         title: 'CHINGUM',
         subtitle: 'Navigating the shadows of uncertainty'
     },
     {
-        id: 7,
+        id: 2,
         image: '/projects/2.jpg',
         title: 'CHINGUM',
         subtitle: 'Hope shines brightest in the dark'
     },
-    // Chingum
     {
-        id: 8,
-        image: '/projects/3.jpg',
+        id: 3,
+        image: '/projects/1.jpg',
         title: 'CHINGUM',
         subtitle: 'A vibrant journey of colors and emotions'
     },
     {
-        id: 9,
+        id: 4,
         image: '/projects/4.jpg',
         title: 'CHINGUM',
         subtitle: 'Celebrating the spirit of youth and dreams'
     },
     {
-        id: 10,
+        id: 5,
         image: '/projects/5.jpg',
         title: 'CHINGUM',
         subtitle: 'Moments that stick with you forever'
     },
     {
-        id: 11,
+        id: 6,
         image: '/projects/chingum/chingum-stills-5.jpg',
         title: 'CHINGUM',
         subtitle: 'Laughter, love, and endless memories'
     },
     {
-        id: 12,
+        id: 7,
         image: '/projects/chingum/chingum-stills-4.jpg',
         title: 'CHINGUM',
         subtitle: 'A cinematic treat for the soul'
+    },
+    // Lords of Lockdown
+    {
+        id: 8,
+        image: '/projects/01.jpg',
+        title: 'LORDS OF LOCKDOWN',
+        subtitle: 'A gripping tale of resilience and humanity'
+    },
+    {
+        id: 9,
+        image: '/projects/02.jpg',
+        title: 'LORDS OF LOCKDOWN',
+        subtitle: 'Capturing the unseen moments of the pandemic'
+    },
+    {
+        id: 10,
+        image: '/projects/03.jpg',
+        title: 'LORDS OF LOCKDOWN',
+        subtitle: 'Stories that echo through silence'
+    },
+    {
+        id: 11,
+        image: '/projects/04.jpg',
+        title: 'LORDS OF LOCKDOWN',
+        subtitle: 'Witness the power of human connection'
+    },
+    {
+        id: 12,
+        image: '/projects/05.jpg',
+        title: 'LORDS OF LOCKDOWN',
+        subtitle: 'Every face tells a story of survival'
     }
 ];
 function ImageSlider() {

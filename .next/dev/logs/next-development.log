@@ -148,3 +148,6 @@ This will cause a hydration error.%s <p> p
 
 [00:45:11.740] Server  LOG     ✓ Compiled in 84ms
 [00:45:54.365] Server  LOG     ✓ Compiled in 242ms
+[00:51:20.572] Server  LOG     ✓ Compiled in 290ms
+[00:52:01.341] Server  LOG     ✓ Compiled in 154ms
+[00:52:04.001] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

@@ -29,10 +29,10 @@ export default function WorkShowcase() {
     }, [selectedMovieId, viewMode]);
 
     return (
-        <section id="work" className="w-full min-h-screen relative overflow-hidden flex flex-col justify-center py-24 md:py-0">
+        <section id="work" className="w-full min-h-screen relative overflow-hidden flex flex-col justify-center py-10 md:py-0">
             <GridBackground />
 
-            <div className="max-w-[1600px] w-full mx-auto px-6 md:px-12 relative z-10 flex flex-col md:flex-row gap-12 md:gap-20 items-center justify-center h-full">
+            <div className="max-w-[1600px] w-full mx-auto px-6 md:px-12 relative z-10 flex flex-col md:flex-row gap-6 md:gap-20 items-center justify-center h-full">
 
                 {/* Left Side: Viewer (Video or Visuals) */}
                 <div className="w-full md:w-2/3 lg:w-3/5 aspect-video relative bg-black rounded-3xl overflow-hidden shadow-2xl border border-white/10">
@@ -97,7 +97,7 @@ export default function WorkShowcase() {
                 </div>
 
                 {/* Right Side: Controls & List */}
-                <div className="w-full md:w-1/3 lg:w-2/5 flex flex-col items-start gap-12">
+                <div className="w-full md:w-1/3 lg:w-2/5 flex flex-col items-start gap-8 md:gap-12">
 
                     {/* Header */}
                     <div>
@@ -134,7 +134,7 @@ export default function WorkShowcase() {
                         <div className="w-full h-px bg-gray-300 my-2"></div>
 
                         {/* Actions for Selected Movie */}
-                        <button
+                        {/* <button
                             onClick={() => setViewMode('visuals')}
                             className={`flex items-center gap-4 text-left group transition-all duration-300 ${viewMode === 'visuals' ? 'text-frog-pink translate-x-4' : 'text-gray-600 hover:text-black hover:translate-x-2'
                                 }`}
@@ -145,7 +145,7 @@ export default function WorkShowcase() {
                             <span className="font-space font-bold text-2xl uppercase tracking-tighter">
                                 VISUALS
                             </span>
-                        </button>
+                        </button> */}
 
                         <Link
                             href={`/movies/${selectedMovie.slug}`}

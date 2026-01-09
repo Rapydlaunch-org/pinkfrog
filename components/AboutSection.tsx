@@ -37,7 +37,10 @@ export default function AboutSection() {
 
                             <div className="space-y-6 text-base md:text-lg text-black/70 font-light leading-relaxed mb-10">
                                 <p>
-                                    PINK FROG FILMS IS A DYNAMIC FILM STUDIO CRAFTING DISTINCT, COLORFUL NARRATIVES THAT LEAP OFF THE SCREEN AND INTO THE CULTURAL CONVERSATION. WE STRIVE TO CAPTURE THE AUTHENTIC VOICE OF NORTHEAST INDIA, SHARING ITS UNTOLD NUANCES WITH THE WORLD.
+                                    Pink Frog Films champions immersive narratives that bridge the gap between regional authenticity and international appeal.
+                                    Their body of work, featuring the acclaimed documentary feature Lords of Lockdown and the horror-noir short Chingum, demonstrates their commitment to transforming local nuances into universal cinema.
+
+                                    The studio is led by founders Momita Jaisi and Mihir Fadnavis, who bring a wealth of diverse experience to their storytelling. Jaisi, formerly the Scheduler at the MAMI Film Festival, specialises in international co-productions, while Fadnavis is a journalist-turned-filmmaker known for his multi-perspective narrative style and his ability to blend gritty realism with genre elements.
                                 </p>
                             </div>
 

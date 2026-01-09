@@ -174,3 +174,52 @@ This will cause a hydration error.%s <p> p
 [00:58:47.345] Browser WARN    Image with src "/projects/05.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [00:58:51.461] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
 [00:58:55.100] Server  LOG     ✓ Compiled in 189ms
+[01:11:30.028] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:11:30.282] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="207496628"
+                        >
+                  ...
+
+[01:11:49.209] Server  LOG     ✓ Compiled in 155ms
+[01:12:20.668] Server  LOG     ✓ Compiled in 178ms
+[01:12:30.889] Server  LOG     ✓ Compiled in 51ms
+[01:12:34.462] Server  LOG     ✓ Compiled in 56ms
+[01:12:35.406] Server  LOG     ✓ Compiled in 38ms
+[01:12:40.861] Server  LOG     ✓ Compiled in 66ms
+[01:12:44.707] Server  LOG     ✓ Compiled in 47ms
+[01:12:54.258] Server  LOG     ✓ Compiled in 56ms
+[01:13:08.396] Server  LOG     ✓ Compiled in 675ms
+[01:13:13.081] Server  LOG     ✓ Compiled in 150ms
+[01:13:17.190] Server  LOG     ✓ Compiled in 58ms
+[01:13:25.149] Server  LOG     ✓ Compiled in 301ms

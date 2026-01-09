@@ -520,6 +520,10 @@
     right: -15%;
   }
 
+  .-right-\[20px\] {
+    right: -20px;
+  }
+
   .-right-\[40px\] {
     right: -40px;
   }
@@ -558,6 +562,14 @@
 
   .-bottom-\[10\%\] {
     bottom: -10%;
+  }
+
+  .-bottom-\[10px\] {
+    bottom: -10px;
+  }
+
+  .-bottom-\[40px\] {
+    bottom: -40px;
   }
 
   .-bottom-\[100px\] {

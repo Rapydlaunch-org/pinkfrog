@@ -12,9 +12,9 @@ export default function Footer() {
         <footer className="bg-white text-black py-20 px-6 md:px-12 border-t border-frog-pink/10 relative overflow-hidden">
             {/* Big Green Frog Bottom Right */}
             <img
-                src="/frogfooter.svg"
+                src="/footer.svg"
                 alt=""
-                className="absolute -bottom-[100px] -right-[40px] w-[350px] md:w-[500px] opacity-100 pointer-events-none select-none z-0 transform rotate-[-10deg]"
+                className="absolute -bottom-[10px] -right-[20px] w-[350px] md:w-[500px] opacity-100 pointer-events-none select-none z-0 transform "
             />
 
             <div className="max-w-[1400px] mx-auto relative z-10">

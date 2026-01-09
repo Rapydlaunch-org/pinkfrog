@@ -114,3 +114,37 @@ It can also happen if the client has a browser extension installed which messes 
 [00:38:26.086] Browser WARN    Image with src "/projects/04.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [00:38:29.294] Browser WARN    Image with src "/projects/05.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [00:39:30.773] Server  LOG     ✓ Compiled in 629ms
+[00:45:02.342] Server  LOG     ✓ Compiled in 256ms
+[00:45:02.489] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <p> p 
+
+  ...
+    <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+      <Home params={Promise} searchParams={Promise}>
+        <main className="relative b...">
+          <AnimatePresence>
+          <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1}}>
+            <div style={{opacity:0}} ref={function useMotionRef.useCallback}>
+              <ImageSlider>
+              <Console>
+              <StorySection>
+              <WorkShowcase>
+              <AboutSection>
+                <section id="about" className="relative w...">
+                  <div className="min-h-scre...">
+                    <div className="max-w-7xl ...">
+                      <div className="flex flex-...">
+                        <motion.div initial={{opacity:0,x:-30}} whileInView={{opacity:1,x:0}} viewport={{once:true}} ...>
+                          <div className="text-left" style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                            <div>
+                            <div className="space-y-6 ...">
+>                             <p>
+>                               <p>
+                                ...
+                            ...
+                        ...
+                  ...
+              ...
+
+[00:45:11.740] Server  LOG     ✓ Compiled in 84ms
+[00:45:54.365] Server  LOG     ✓ Compiled in 242ms

@@ -1169,14 +1169,23 @@ function AboutSection() {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "space-y-6 text-base md:text-lg text-black/70 font-light leading-relaxed mb-10",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            children: "Pink Frog Films champions immersive narratives that bridge the gap between regional authenticity and international appeal. Their body of work, featuring the acclaimed documentary feature Lords of Lockdown and the horror-noir short Chingum, demonstrates their commitment to transforming local nuances into universal cinema. The studio is led by founders Momita Jaisi and Mihir Fadnavis, who bring a wealth of diverse experience to their storytelling. Jaisi, formerly the Scheduler at the MAMI Film Festival, specialises in international co-productions, while Fadnavis is a journalist-turned-filmmaker known for his multi-perspective narrative style and his ability to blend gritty realism with genre elements."
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/AboutSection.tsx",
-                                            lineNumber: 44,
-                                            columnNumber: 33
-                                        }, this)
-                                    }, void 0, false, {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                children: "Pink Frog Films champions immersive narratives that bridge the gap between regional authenticity and international appeal. Their body of work, featuring the acclaimed documentary feature Lords of Lockdown and the horror-noir short Chingum, demonstrates their commitment to transforming local nuances into universal cinema."
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/AboutSection.tsx",
+                                                lineNumber: 44,
+                                                columnNumber: 33
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                children: "The studio is led by founders Momita Jaisi and Mihir Fadnavis, who bring a wealth of diverse experience to their storytelling. Jaisi, formerly the Scheduler at the MAMI Film Festival, specialises in international co-productions, while Fadnavis is a journalist-turned-filmmaker known for his multi-perspective narrative style and his ability to blend gritty realism with genre elements."
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/AboutSection.tsx",
+                                                lineNumber: 48,
+                                                columnNumber: 33
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "[project]/components/AboutSection.tsx",
                                         lineNumber: 43,
                                         columnNumber: 29
@@ -1187,7 +1196,7 @@ function AboutSection() {
                                         children: "Read More"
                                     }, void 0, false, {
                                         fileName: "[project]/components/AboutSection.tsx",
-                                        lineNumber: 52,
+                                        lineNumber: 53,
                                         columnNumber: 29
                                     }, this)
                                 ]
@@ -1219,12 +1228,12 @@ function AboutSection() {
                                     className: "object-cover w-full h-full hover:scale-105 transition-transform duration-700"
                                 }, void 0, false, {
                                     fileName: "[project]/components/AboutSection.tsx",
-                                    lineNumber: 69,
+                                    lineNumber: 70,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/AboutSection.tsx",
-                                lineNumber: 61,
+                                lineNumber: 62,
                                 columnNumber: 25
                             }, this)
                         ]
@@ -1253,7 +1262,7 @@ function AboutSection() {
                             children: "FEATURED POSTERS"
                         }, void 0, false, {
                             fileName: "[project]/components/AboutSection.tsx",
-                            lineNumber: 82,
+                            lineNumber: 83,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1294,7 +1303,7 @@ function AboutSection() {
                                                 className: "w-full h-full object-cover"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/AboutSection.tsx",
-                                                lineNumber: 105,
+                                                lineNumber: 106,
                                                 columnNumber: 37
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1306,44 +1315,44 @@ function AboutSection() {
                                                         strokeWidth: 1.5
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/AboutSection.tsx",
-                                                        lineNumber: 112,
+                                                        lineNumber: 113,
                                                         columnNumber: 45
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/AboutSection.tsx",
-                                                    lineNumber: 111,
+                                                    lineNumber: 112,
                                                     columnNumber: 41
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/AboutSection.tsx",
-                                                lineNumber: 110,
+                                                lineNumber: 111,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, `${poster.id}-${i}`, true, {
                                         fileName: "[project]/components/AboutSection.tsx",
-                                        lineNumber: 98,
+                                        lineNumber: 99,
                                         columnNumber: 33
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/AboutSection.tsx",
-                                lineNumber: 87,
+                                lineNumber: 88,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/AboutSection.tsx",
-                            lineNumber: 86,
+                            lineNumber: 87,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/AboutSection.tsx",
-                    lineNumber: 81,
+                    lineNumber: 82,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/AboutSection.tsx",
-                lineNumber: 80,
+                lineNumber: 81,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -1367,12 +1376,12 @@ function AboutSection() {
                                 size: 32
                             }, void 0, false, {
                                 fileName: "[project]/components/AboutSection.tsx",
-                                lineNumber: 136,
+                                lineNumber: 137,
                                 columnNumber: 29
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/AboutSection.tsx",
-                            lineNumber: 132,
+                            lineNumber: 133,
                             columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1386,7 +1395,7 @@ function AboutSection() {
                                     className: "max-h-[85vh] max-w-full object-contain rounded-lg shadow-2xl"
                                 }, void 0, false, {
                                     fileName: "[project]/components/AboutSection.tsx",
-                                    lineNumber: 143,
+                                    lineNumber: 144,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1398,31 +1407,31 @@ function AboutSection() {
                                             size: 20
                                         }, void 0, false, {
                                             fileName: "[project]/components/AboutSection.tsx",
-                                            lineNumber: 155,
+                                            lineNumber: 156,
                                             columnNumber: 33
                                         }, this),
                                         "Download Poster"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/AboutSection.tsx",
-                                    lineNumber: 150,
+                                    lineNumber: 151,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/AboutSection.tsx",
-                            lineNumber: 139,
+                            lineNumber: 140,
                             columnNumber: 25
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/AboutSection.tsx",
-                    lineNumber: 125,
+                    lineNumber: 126,
                     columnNumber: 21
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/AboutSection.tsx",
-                lineNumber: 123,
+                lineNumber: 124,
                 columnNumber: 13
             }, this)
         ]

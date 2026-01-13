@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import FrogLoader from '@/components/FrogLoader';
 import ImageSlider from '@/components/ImageSlider';
 import CompanyIntro from '@/components/CompanyIntro';
@@ -14,6 +14,23 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
     const [isLoading, setIsLoading] = useState(true);
+
+    // Handle hash navigation after loader completes
+    useEffect(() => {
+        if (!isLoading) {
+            const hash = window.location.hash;
+            if (hash) {
+                // Small timeout to ensure DOM is ready
+                setTimeout(() => {
+                    const id = hash.replace('#', '');
+                    const element = document.getElementById(id);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 100);
+            }
+        }
+    }, [isLoading]);
 
     return (
         <main className="relative bg-transparent text-white font-sans min-h-screen overflow-x-hidden">

@@ -5,10 +5,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import NavigationMenu from '@/components/NavigationMenu';
 import Footer from '@/components/Footer';
+import BackgroundElements from '@/components/BackgroundElements';
 
 export default function MihirAndMePage() {
     return (
-        <main className="relative bg-white text-black font-sans min-h-screen">
+        <main className="relative bg-transparent text-black font-sans min-h-screen">
+            <BackgroundElements />
+
             <NavigationMenu />
 
             {/* Hero Section */}

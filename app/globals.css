@@ -37,6 +37,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+p {
+  font-family: "JetBrains Mono", monospace;
+}
+
 h1,
 h2,
 h3,

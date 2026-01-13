@@ -48,13 +48,39 @@ export default function FrogLoader({ onComplete }: FrogLoaderProps) {
                 {/* Logo Area */}
                 <div className="flex justify-center mb-12">
                     <motion.div
+                        className="relative w-16 h-16"
                         animate={{
                             scale: [1, 1.05, 1],
-                            opacity: [0.5, 1, 0.5]
                         }}
                         transition={{ duration: 2, repeat: Infinity }}
                     >
-                        <img src="/frog.svg" alt="Frog" className="w-16 h-16 grayscale opacity-40" />
+                        <div
+                            className="absolute inset-0 w-full h-full"
+                            style={{
+                                maskImage: 'url(/Frog.svg)',
+                                WebkitMaskImage: 'url(/Frog.svg)',
+                                maskSize: 'contain',
+                                WebkitMaskSize: 'contain',
+                                maskRepeat: 'no-repeat',
+                                WebkitMaskRepeat: 'no-repeat',
+                                maskPosition: 'center',
+                                WebkitMaskPosition: 'center',
+                                maskMode: 'alpha',
+                                WebkitMaskMode: 'alpha',
+                            } as any}
+                        >
+                            {/* Empty State Background */}
+                            <div className="absolute inset-0 bg-gray-400 opacity-20" />
+
+                            {/* Water Fill */}
+                            <motion.div
+                                className="absolute bottom-0 left-0 right-0 bg-frog-green"
+                                animate={{
+                                    height: `${progress}%`,
+                                }}
+                                transition={{ type: "spring", stiffness: 50, damping: 20 }}
+                            />
+                        </div>
                     </motion.div>
                 </div>
 

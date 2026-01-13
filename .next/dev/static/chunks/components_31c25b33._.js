@@ -8,6 +8,7 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-client] (ecmascript)");
@@ -20,23 +21,64 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+;
 function NavigationMenu() {
     _s();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isVisible, setIsVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [lastScrollY, setLastScrollY] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "NavigationMenu.useEffect": ()=>{
+            const controlNavbar = {
+                "NavigationMenu.useEffect.controlNavbar": ()=>{
+                    if ("TURBOPACK compile-time truthy", 1) {
+                        if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                            // if scroll down hide the navbar
+                            setIsVisible(false);
+                        } else {
+                            // if scroll up show the navbar
+                            setIsVisible(true);
+                        }
+                        // remember current page location to use in the next move
+                        setLastScrollY(window.scrollY);
+                    }
+                }
+            }["NavigationMenu.useEffect.controlNavbar"];
+            if ("TURBOPACK compile-time truthy", 1) {
+                window.addEventListener('scroll', controlNavbar);
+                // cleanup function
+                return ({
+                    "NavigationMenu.useEffect": ()=>{
+                        window.removeEventListener('scroll', controlNavbar);
+                    }
+                })["NavigationMenu.useEffect"];
+            }
+        }
+    }["NavigationMenu.useEffect"], [
+        lastScrollY
+    ]);
     const handleScroll = (e, href)=>{
         e.preventDefault();
         setIsMobileMenuOpen(false); // Close mobile menu if open
         const targetId = href.replace('#', '');
-        const elem = document.getElementById(targetId);
-        if (elem) {
-            elem.scrollIntoView({
-                behavior: 'smooth'
-            });
-        } else if (href === '/') {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+        if (pathname === '/') {
+            // If already on home page, smooth scroll
+            const elem = document.getElementById(targetId);
+            if (elem) {
+                elem.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            } else if (href === '/') {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        } else {
+            // If on another page, redirect to home with hash
+            router.push(`/${href}`);
         }
     };
     // Prevent scrolling when mobile menu is open
@@ -66,7 +108,7 @@ function NavigationMenu() {
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-        className: "fixed top-0 left-0 w-full z-[60] px-6 md:px-12 py-6 flex items-center justify-between transition-all duration-300 bg-gradient-to-r from-white/90 to-black/90 backdrop-blur-md border-b border-white/5",
+        className: `fixed top-0 left-0 w-full z-[60] px-6 md:px-12 py-6 flex items-center justify-between transition-all duration-300 bg-gradient-to-r from-white/90 to-black/90 backdrop-blur-md border-b border-white/5 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 href: "/",
@@ -77,12 +119,12 @@ function NavigationMenu() {
                     className: "h-8 md:h-10 w-auto object-contain"
                 }, void 0, false, {
                     fileName: "[project]/components/NavigationMenu.tsx",
-                    lineNumber: 44,
+                    lineNumber: 85,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/NavigationMenu.tsx",
-                lineNumber: 43,
+                lineNumber: 84,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -97,18 +139,18 @@ function NavigationMenu() {
                                 className: "absolute -bottom-2 left-0 w-0 h-[2px] bg-frog-green transition-all duration-300 group-hover:w-full"
                             }, void 0, false, {
                                 fileName: "[project]/components/NavigationMenu.tsx",
-                                lineNumber: 61,
+                                lineNumber: 102,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, item.label, true, {
                         fileName: "[project]/components/NavigationMenu.tsx",
-                        lineNumber: 54,
+                        lineNumber: 95,
                         columnNumber: 21
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/NavigationMenu.tsx",
-                lineNumber: 52,
+                lineNumber: 93,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -119,18 +161,18 @@ function NavigationMenu() {
                     size: 32
                 }, void 0, false, {
                     fileName: "[project]/components/NavigationMenu.tsx",
-                    lineNumber: 72,
+                    lineNumber: 113,
                     columnNumber: 37
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                     size: 32
                 }, void 0, false, {
                     fileName: "[project]/components/NavigationMenu.tsx",
-                    lineNumber: 72,
+                    lineNumber: 113,
                     columnNumber: 55
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/NavigationMenu.tsx",
-                lineNumber: 67,
+                lineNumber: 108,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -166,12 +208,12 @@ function NavigationMenu() {
                                 alt: ""
                             }, void 0, false, {
                                 fileName: "[project]/components/NavigationMenu.tsx",
-                                lineNumber: 87,
+                                lineNumber: 128,
                                 columnNumber: 29
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/NavigationMenu.tsx",
-                            lineNumber: 86,
+                            lineNumber: 127,
                             columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -195,12 +237,12 @@ function NavigationMenu() {
                                     children: item.label
                                 }, item.label, false, {
                                     fileName: "[project]/components/NavigationMenu.tsx",
-                                    lineNumber: 92,
+                                    lineNumber: 133,
                                     columnNumber: 33
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/NavigationMenu.tsx",
-                            lineNumber: 90,
+                            lineNumber: 131,
                             columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -219,7 +261,7 @@ function NavigationMenu() {
                                     className: "w-12 h-[2px] bg-frog-green/50 mb-2"
                                 }, void 0, false, {
                                     fileName: "[project]/components/NavigationMenu.tsx",
-                                    lineNumber: 112,
+                                    lineNumber: 153,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -227,34 +269,39 @@ function NavigationMenu() {
                                     children: "Pink Frog Motion Pictures"
                                 }, void 0, false, {
                                     fileName: "[project]/components/NavigationMenu.tsx",
-                                    lineNumber: 113,
+                                    lineNumber: 154,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/NavigationMenu.tsx",
-                            lineNumber: 106,
+                            lineNumber: 147,
                             columnNumber: 25
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/NavigationMenu.tsx",
-                    lineNumber: 78,
+                    lineNumber: 119,
                     columnNumber: 21
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/NavigationMenu.tsx",
-                lineNumber: 76,
+                lineNumber: 117,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/NavigationMenu.tsx",
-        lineNumber: 40,
+        lineNumber: 80,
         columnNumber: 9
     }, this);
 }
-_s(NavigationMenu, "gQOEbwLkKOhPX9CeqhbWWB3OzL4=");
+_s(NavigationMenu, "khAJrbiAgtUkKdAmlnj7LU541iY=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
+    ];
+});
 _c = NavigationMenu;
 var _c;
 __turbopack_context__.k.register(_c, "NavigationMenu");

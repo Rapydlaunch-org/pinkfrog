@@ -23,8 +23,18 @@ export default function AboutSection() {
 
             {/* 1. Minimal Full-Screen About Intro */}
             <div className="min-h-screen w-full flex flex-col items-center justify-center relative px-6 md:px-12 py-20 overflow-hidden bg-white/50 backdrop-blur-md">
+                {/* Big Checkbox Grid Background */}
+                <div className="absolute inset-0 z-0 pointer-events-none"
+                    style={{
+                        backgroundImage: `
+                             linear-gradient(to right, rgba(44, 204, 76, 0.1) 1px, transparent 1px),
+                             linear-gradient(to bottom, rgba(44, 204, 76, 0.1) 1px, transparent 1px)
+                         `,
+                        backgroundSize: '40px 40px',
+                    }}
+                />
                 <div className="max-w-7xl mx-auto w-full z-10 my-auto">
-                    <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+                    <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 md:gap-16 items-center md:items-stretch">
                         {/* LEFT: Text Content */}
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
@@ -64,11 +74,14 @@ export default function AboutSection() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="relative aspect-[4/5] md:aspect-square rounded-[32px] overflow-hidden shadow-2xl"
+                            className="relative aspect-[4/5] md:aspect-auto md:h-full overflow-hidden drop-shadow-2xl"
+                            style={{
+                                clipPath: 'polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)'
+                            }}
                         >
                             {/* Placeholder image from available assets */}
                             <img
-                                src="/hero-slide-2.png"
+                                src="/founder.png"
                                 alt="Pink Frog Team"
                                 className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
                             />

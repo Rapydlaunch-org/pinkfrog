@@ -2,22 +2,62 @@
 
 
 import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 export default function NavigationMenu() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+    const pathname = usePathname();
+    const router = useRouter();
+
+    useEffect(() => {
+        const controlNavbar = () => {
+            if (typeof window !== 'undefined') {
+                if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                    // if scroll down hide the navbar
+                    setIsVisible(false);
+                } else {
+                    // if scroll up show the navbar
+                    setIsVisible(true);
+                }
+
+                // remember current page location to use in the next move
+                setLastScrollY(window.scrollY);
+            }
+        };
+
+        if (typeof window !== 'undefined') {
+            window.addEventListener('scroll', controlNavbar);
+
+            // cleanup function
+            return () => {
+                window.removeEventListener('scroll', controlNavbar);
+            };
+        }
+    }, [lastScrollY]);
 
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         e.preventDefault();
         setIsMobileMenuOpen(false); // Close mobile menu if open
+
         const targetId = href.replace('#', '');
-        const elem = document.getElementById(targetId);
-        if (elem) {
-            elem.scrollIntoView({ behavior: 'smooth' });
-        } else if (href === '/') {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        if (pathname === '/') {
+            // If already on home page, smooth scroll
+            const elem = document.getElementById(targetId);
+            if (elem) {
+                elem.scrollIntoView({ behavior: 'smooth' });
+            } else if (href === '/') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        } else {
+            // If on another page, redirect to home with hash
+            router.push(`/${href}`);
         }
     };
 
@@ -38,7 +78,8 @@ export default function NavigationMenu() {
 
     return (
         <header
-            className="fixed top-0 left-0 w-full z-[60] px-6 md:px-12 py-6 flex items-center justify-between transition-all duration-300 bg-gradient-to-r from-white/90 to-black/90 backdrop-blur-md border-b border-white/5"
+            className={`fixed top-0 left-0 w-full z-[60] px-6 md:px-12 py-6 flex items-center justify-between transition-all duration-300 bg-gradient-to-r from-white/90 to-black/90 backdrop-blur-md border-b border-white/5 ${isVisible ? 'translate-y-0' : '-translate-y-full'
+                }`}
         >
             <Link href="/" className="flex items-center group relative z-[70]">
                 <img

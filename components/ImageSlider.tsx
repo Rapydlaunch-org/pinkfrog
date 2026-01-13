@@ -10,74 +10,67 @@ const slides = [
         id: 1,
         image: '/projects/3.jpg',
         title: 'CHINGUM',
-        subtitle: 'Navigating the shadows of uncertainty'
+
     },
     {
         id: 2,
-        image: '/projects/2.jpg',
-        title: 'CHINGUM',
-        subtitle: 'Hope shines brightest in the dark'
+        image: '/projects/01.jpg',
+        title: 'LORDS OF LOCKDOWN',
+
     },
     {
         id: 3,
-        image: '/projects/1.jpg',
+        image: '/projects/2.jpg',
         title: 'CHINGUM',
-        subtitle: 'A vibrant journey of colors and emotions'
+
     },
+
     {
         id: 4,
-        image: '/projects/4.jpg',
-        title: 'CHINGUM',
-        subtitle: 'Celebrating the spirit of youth and dreams'
+        image: '/projects/02.jpg',
+        title: 'LORDS OF LOCKDOWN',
+
     },
     {
         id: 5,
-        image: '/projects/5.jpg',
+        image: '/projects/4.jpg',
         title: 'CHINGUM',
-        subtitle: 'Moments that stick with you forever'
+
     },
     {
         id: 6,
-        image: '/projects/chingum/chingum-stills-5.jpg',
-        title: 'CHINGUM',
-        subtitle: 'Laughter, love, and endless memories'
+        image: '/projects/03.jpg',
+        title: 'LORDS OF LOCKDOWN',
+
     },
+
     {
         id: 7,
-        image: '/projects/chingum/chingum-stills-4.jpg',
+        image: '/projects/chingum/chingum-stills-5.jpg',
         title: 'CHINGUM',
-        subtitle: 'A cinematic treat for the soul'
+
     },
-    // Lords of Lockdown
     {
         id: 8,
-        image: '/projects/01.jpg',
+        image: '/projects/04.jpg',
         title: 'LORDS OF LOCKDOWN',
-        subtitle: 'A gripping tale of resilience and humanity'
+
     },
     {
         id: 9,
-        image: '/projects/02.jpg',
-        title: 'LORDS OF LOCKDOWN',
-        subtitle: 'Capturing the unseen moments of the pandemic'
+        image: '/projects/chingum/chingum-stills-4.jpg',
+        title: 'CHINGUM',
+
     },
+    // Lords of Lockdown
+
+
+
     {
         id: 10,
-        image: '/projects/03.jpg',
-        title: 'LORDS OF LOCKDOWN',
-        subtitle: 'Stories that echo through silence'
-    },
-    {
-        id: 11,
-        image: '/projects/04.jpg',
-        title: 'LORDS OF LOCKDOWN',
-        subtitle: 'Witness the power of human connection'
-    },
-    {
-        id: 12,
         image: '/projects/05.jpg',
         title: 'LORDS OF LOCKDOWN',
-        subtitle: 'Every face tells a story of survival'
+
     }
 ];
 
@@ -118,42 +111,46 @@ export default function ImageSlider() {
                 </motion.div>
             </AnimatePresence>
 
-            {/* Content Overlay */}
-            <div className="absolute inset-0 flex flex-col justify-end items-start px-6 md:px-12 z-10 w-full pb-32 md:pb-20">
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={`title-${currentIndex}`}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -20 }}
-                        transition={{ duration: 0.6, ease: "easeInOut" }}
-                        className="text-left w-full max-w-4xl"
-                    >
-                        <h1 className="text-4xl md:text-6xl leading-[0.9] font-changa font-medium tracking-tighter text-white uppercase drop-shadow-lg mb-4">
-                            {slides[currentIndex].title}
-                        </h1>
-                        <p className="text-lg md:text-xl text-white/80 font-light font-mono tracking-wide">
-                            {slides[currentIndex].subtitle}
-                        </p>
-                    </motion.div>
-                </AnimatePresence>
+            {/* Content Overlay & Navigation */}
+            <div className="absolute bottom-12 left-0 right-0 px-6 md:px-12 z-20 w-full flex items-center">
+
+                {/* Title - Left Aligned */}
+                <div className="flex-1 pointer-events-none">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={`title-${currentIndex}`}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -20 }}
+                            transition={{ duration: 0.6, ease: "easeInOut" }}
+                            className="text-left pointer-events-auto"
+                        >
+                            <h1 className="text-4xl md:text-5xl leading-[0.9] font-changa font-medium tracking-tighter text-white uppercase drop-shadow-lg m-0">
+                                {slides[currentIndex].title}
+                            </h1>
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
+
+                {/* Navigation Dots - Centered */}
+                <div className="absolute left-1/2 -translate-x-1/2 flex gap-3 pointer-events-auto">
+                    {slides.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => goToSlide(index)}
+                            className="group relative"
+                        >
+                            <div className={`w-12 h-1 transition-all duration-500 ${index === currentIndex
+                                ? 'bg-frog-pink'
+                                : 'bg-white/30 group-hover:bg-white/50'
+                                }`} />
+                        </button>
+                    ))}
+                </div>
+
             </div>
 
-            {/* Navigation Dots */}
-            <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-3 z-20">
-                {slides.map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => goToSlide(index)}
-                        className="group relative"
-                    >
-                        <div className={`w-12 h-1 transition-all duration-500 ${index === currentIndex
-                            ? 'bg-frog-pink'
-                            : 'bg-white/30 group-hover:bg-white/50'
-                            }`} />
-                    </button>
-                ))}
-            </div>
+
 
             {/* Scroll Indicator */}
             <motion.div

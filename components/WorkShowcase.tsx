@@ -268,30 +268,30 @@ export default function WorkShowcase() {
                         {/* Divider */}
                         <div className="w-full h-px bg-gray-300 my-2"></div>
 
-                        {/* Actions for Selected Movie */}
                         <Link
-                            href={`/movies/${selectedMovie.slug}#visuals`}
+                            href={`/movies/${selectedMovie.slug}`}
                             className="flex items-center gap-4 text-left group text-gray-600 hover:text-black hover:translate-x-2 transition-all duration-300"
                         >
                             <span className="w-12 h-8 border border-current rounded-full flex items-center justify-center font-mono text-[10px]">
                                 01
                             </span>
                             <span className="font-space font-bold text-2xl uppercase tracking-tighter">
-                                VISUALS
+                                FILM DETAILS
                             </span>
                         </Link>
-
                         <Link
-                            href={`/movies/${selectedMovie.slug}`}
+                            href={`/movies/${selectedMovie.slug}#visuals`}
                             className="flex items-center gap-4 text-left group text-gray-600 hover:text-black hover:translate-x-2 transition-all duration-300"
                         >
                             <span className="w-12 h-8 border border-current rounded-full flex items-center justify-center font-mono text-[10px]">
                                 02
                             </span>
                             <span className="font-space font-bold text-2xl uppercase tracking-tighter">
-                                FILM DETAILS
+                                VISUALS
                             </span>
                         </Link>
+
+
                     </div>
 
                 </div>

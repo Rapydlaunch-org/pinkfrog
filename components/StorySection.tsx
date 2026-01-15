@@ -19,7 +19,7 @@ export default function StorySection() {
             <div className="relative z-10 max-w-7xl w-full flex flex-col items-center gap-12">
                 <div className="w-full flex flex-col md:flex-row gap-8 md:gap-16 justify-center items-start relative z-10 px-4">
                     {/* System Ready Console */}
-                    <div className="console-box w-full max-w-sm">
+                    <div className="console-box w-full max-w-sm mt-20">
                         <div className="flex justify-between items-center mb-4 border-b border-frog-pink/20 pb-2">
                             <span className="text-[10px] text-frog-green uppercase tracking-widest">PINK FROG OS V1.0.4</span>
                             <div className="w-2 h-2 rounded-full bg-frog-green animate-pulse"></div>
@@ -46,10 +46,12 @@ export default function StorySection() {
                     <TechVisualizer />
                 </div>
 
-                <div className="text-center w-full max-w-[1100px] mx-auto">
-                    <p className="text-[5.5vw] md:text-[2.2vw] font-bold leading-[1.05] font-space tracking-tight text-black uppercase opacity-90 transition-opacity duration-500">
-                        Pink Frog Films is a dynamic film studio crafting distinct, colorful narratives that leap off the screen and into the cultural conversation. We strive to capture the authentic voice of Northeast India, sharing its untold nuances with the world.  </p>
+                <div className="w-full max-w-[1100px] mx-auto md:mx-0 md:w-[65%] md:ml-[20%]">
+                    <p className="text-center text-[5.5vw] md:text-[2.2vw] font-bold leading-[1.05] font-space tracking-tight text-black uppercase opacity-90 transition-opacity duration-500">
+                        Pink Frog Films is a dynamic film studio crafting distinct, colorful narratives that leap off the screen and into the cultural conversation. We strive to capture the authentic voice of Northeast India, sharing its untold nuances with the world.
+                    </p>
                 </div>
+
             </div>
         </section>
     );

@@ -1,3 +1,190 @@
-[00:00:01.076] Server  LOG     ✓ Ready in 801ms
-[00:00:01.077] Server  WARN    ⚠ Blocked cross-origin request from 192.168.29.243 to /_next/* resource. To allow this, configure "allowedDevOrigins" in next.config
+[00:00:01.177] Server  LOG     ✓ Ready in 921ms
+[00:00:08.787] Server  WARN    ⚠ Blocked cross-origin request from 192.168.29.243 to /_next/* resource. To allow this, configure "allowedDevOrigins" in next.config
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:02:29.122] Server  LOG     ✓ Compiled in 1820ms
+[00:05:20.487] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:20.612] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="207497608"
+                        >
+                          <head>
+                          <body
++                           className="antialiased bg-[#ffffff] text-white"
+-                           className="antialiased bg-[#ffffff] text-white antigravity-scroll-lock"
+                          >
+                  ...
+
+[00:05:53.862] Browser WARN    Unable to access iframe: {}
+[00:20:45.690] Server  LOG     ✓ Compiled in 4.7s
+[00:21:50.641] Server  LOG     ✓ Compiled in 4.4s
+[00:22:10.111] Server  LOG     ✓ Compiled in 1532ms
+[00:22:13.511] Server  LOG     ✓ Compiled in 346ms
+[00:22:20.325] Server  LOG     ✓ Compiled in 594ms
+[00:22:24.063] Server  LOG     ✓ Compiled in 839ms
+[00:22:39.464] Server  LOG     ✓ Compiled in 5s
+[00:22:41.547] Server  LOG     ○ Compiling / ...
+[00:22:44.305] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:10.465] Server  LOG     ✓ Compiled in 8.5s
+[00:23:20.429] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:36.632] Server  LOG     ✓ Finished filesystem cache database compaction in 22.0s
+[00:24:28.386] Server  LOG     ✓ Compiled in 7.4s
+[00:24:39.084] Server  LOG     ✓ Compiled in 3.5s
+[00:56:39.052] Server  LOG     ✓ Compiled in 1134ms
+[00:57:01.233] Server  LOG     ✓ Compiled in 882ms
+[00:57:15.878] Server  LOG     ✓ Compiled in 329ms
+[00:57:38.036] Server  LOG     ✓ Compiled in 227ms
+[00:57:48.490] Server  LOG     ✓ Compiled in 153ms
+[00:57:51.915] Server  LOG     ✓ Compiled in 77ms
+[00:57:55.536] Server  LOG     ✓ Compiled in 423ms
+[00:58:02.799] Server  LOG     ✓ Compiled in 229ms
+[00:58:04.032] Server  LOG     ✓ Compiled in 180ms
+[00:59:08.333] Server  LOG     ✓ Compiled in 3s
+[00:59:24.784] Server  LOG     ✓ Compiled in 3.1s
+[00:59:39.965] Server  LOG     ✓ Compiled in 2.5s
+[00:59:55.329] Server  LOG     ✓ Compiled in 1616ms
+[01:00:04.481] Server  LOG     ✓ Compiled in 1486ms
+[01:00:55.107] Server  LOG     ✓ Compiled in 2.8s
+[01:01:33.204] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:01:33.204] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[01:08:25.943] Server  LOG     ✓ Compiled in 1540ms
+[01:08:51.154] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:08:51.426] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/movies/lo..." notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="207497609"
+                        >
+                  ...
+
+[01:08:51.426] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[01:11:05.308] Server  LOG     ✓ Compiled in 361ms
+[01:11:55.198] Server  LOG     ✓ Compiled in 315ms
+[01:12:15.038] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:12:15.221] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/movies/lo..." notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         data-jetski-tab-id="207497610"
+                        >
+                          <head>
+                          <body
++                           className="antialiased bg-[#ffffff] text-white"
+-                           className="antialiased bg-[#ffffff] text-white antigravity-scroll-lock"
+                          >
+                  ...
+
+[01:12:15.221] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[01:12:29.979] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:12:30.523] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[01:12:33.991] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:12:44.853] Server  LOG     ○ Compiling /movies/[id] ...
+[01:13:06.910] Server  LOG     ✓ Finished writing to filesystem cache in 14.3s
+[01:13:26.237] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:13:33.807] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:13:33.808] Browser WARN    Image with src "/projects/3.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:13:33.808] Browser WARN    Image with src "/projects/2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:13:33.808] Browser WARN    Image with src "/projects/4.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:13:33.810] Browser WARN    Image with src "/projects/1.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:13:36.802] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:13:37.059] Browser WARN    Image with src "/projects/5.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:13:37.613] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[01:17:05.313] Server  LOG     ✓ Compiled in 3.1s
+[01:17:07.163] Server  LOG     ✓ Compiled in 10ms
+[01:20:30.305] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[01:26:29.788] Server  LOG     ✓ Compiled in 840ms
+[01:28:39.483] Server  LOG     ✓ Compiled in 298ms
+[01:30:01.462] Server  LOG     ✓ Compiled in 207ms
+[01:31:18.699] Server  LOG     ✓ Compiled in 195ms
+[01:33:04.682] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:33:05.008] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[01:34:18.355] Server  LOG     ✓ Compiled in 183ms
+[01:35:18.283] Server  LOG     ✓ Compiled in 615ms
+[01:37:49.564] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:53:52.709] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:53:53.028] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.

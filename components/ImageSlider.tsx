@@ -125,7 +125,7 @@ export default function ImageSlider() {
                             transition={{ duration: 0.6, ease: "easeInOut" }}
                             className="text-left pointer-events-auto"
                         >
-                            <h1 className="text-4xl md:text-5xl leading-[0.9] font-changa font-medium tracking-tighter text-white uppercase drop-shadow-lg m-0">
+                            <h1 className="text-2xl md:text-3xl leading-[0.9] font-changa font-medium tracking-tighter text-white uppercase drop-shadow-lg m-0">
                                 {slides[currentIndex].title}
                             </h1>
                         </motion.div>

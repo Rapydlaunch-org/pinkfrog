@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import FrogLoader from '@/components/FrogLoader';
 import ImageSlider from '@/components/ImageSlider';
-import CompanyIntro from '@/components/CompanyIntro';
 import Console from '@/components/Console';
 import StorySection from '@/components/StorySection';
 import WorkShowcase from '@/components/WorkShowcase';

@@ -44,7 +44,7 @@ export default function Footer() {
                 transition={{ duration: 1.5, ease: "easeOut" }}
                 src="/footer.svg"
                 alt=""
-                className="absolute -bottom-[20px] -right-[40px] w-[400px] md:w-[650px] pointer-events-none select-none z-0 mix-blend-screen opacity-60"
+                className="absolute -bottom-[20px] -right-[40px] w-[400px] md:w-[450px] pointer-events-none select-none z-0 mix-blend-screen opacity-60"
             />
 
             <div className="max-w-[1400px] mx-auto relative z-10">
@@ -82,9 +82,7 @@ export default function Footer() {
                                 </svg>
                             </div>
                             <div className="flex flex-col">
-                                <span className="font-mono text-[10px] tracking-[0.4em] uppercase text-white/40 group-hover:text-frog-green transition-colors font-bold">
-                                    COLLABORATE
-                                </span>
+
                                 <span className="font-space text-lg md:text-xl text-white">LETS CONNECT</span>
                             </div>
                         </button>
@@ -99,7 +97,7 @@ export default function Footer() {
                                 {[
                                     { label: 'HOME', href: '#home' },
                                     { label: 'WORKS', href: '#work' },
-                                    { label: 'Posters', href: '#featured-posters' },
+                                    { label: 'POSTERS', href: '#featured-posters' },
                                     { label: 'ABOUT', href: '#about' },
 
                                     { label: 'CONTACT', href: '#contact' }

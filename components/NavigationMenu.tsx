@@ -78,8 +78,7 @@ export default function NavigationMenu() {
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-[60] px-6 md:px-12 py-6 flex items-center justify-between transition-all duration-300 bg-gradient-to-r from-white/90 to-black/90 backdrop-blur-md border-b border-white/5 ${isVisible ? 'translate-y-0' : '-translate-y-full'
-                }`}
+            className="relative w-full z-[60] px-6 md:px-12 py-6 flex items-center justify-between transition-all duration-300 bg-gradient-to-r from-white/90 to-black/90 backdrop-blur-md border-b border-white/5"
         >
             <Link href="/" className="flex items-center group relative z-[70]">
                 <img

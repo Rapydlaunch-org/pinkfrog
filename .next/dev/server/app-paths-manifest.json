@@ -1,6 +1,5 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/movies/[id]/page": "app/movies/[id]/page.js",
   "/movies/lords-of-lockdown/page": "app/movies/lords-of-lockdown/page.js",
   "/page": "app/page.js"
 }
